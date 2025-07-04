@@ -14,7 +14,7 @@ body {
 }
 
 .hero {
-    position: relative;
+    position: relative;  /* IMPORTANTE: para posicionar elementos filhos absolutamente */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,18 @@ body {
     background-size: cover;
     flex-direction: column;
     animation: fadeIn 2s ease-in-out;
+}
+
+.author-top {
+    position: absolute;
+    top: 20px; /* distância do topo */
+    left: 20px; /* distância da esquerda */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
@@ -144,17 +156,6 @@ body {
 .author-name {
     font-weight: bold;
     font-size: 1.3rem, 20px;
-}
-
-.author-top {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeIn {
