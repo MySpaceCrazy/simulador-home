@@ -26,15 +26,16 @@ body {
 }
 
 .author-top {
-    position: absolute;
-    top: 20px; /* distância do topo */
-    left: 20px; /* distância da esquerda */
+    position: fixed; /* Mantém no canto superior mesmo ao rolar a página */
+    top: 20px;
+    left: 20px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 2px solid white;
     object-fit: cover;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Garante que fique na frente do fundo */
 }
 
 .hero h1 {
