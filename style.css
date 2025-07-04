@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -67,3 +68,74 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+=======
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e00ff, #0099ff);
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/transition.gif') no-repeat center center;
+    background-size: cover;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.app-card {
+    background: white;
+    color: #333;
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+}
+
+.app-card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+>>>>>>> e6ad6f55a258f12cebf5c96a7e4c3530227b4ec0
