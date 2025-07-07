@@ -216,3 +216,55 @@ if (scrollToTop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// Referências adicionais para o popup Sobre e Contato
+const popupBg = document.getElementById('popupBg');
+const contatoPopup = document.getElementById('contatoPopup');
+const closeContatoPopup = document.getElementById('closeContatoPopup');
+
+// Ajusta links do menu que tem href="#" para evitar scroll padrão
+document.querySelectorAll('.menu-dropdown a[href="#"]').forEach(link => {
+    link.addEventListener('click', (e) => e.preventDefault());
+});
+
+// Controle do popup "Sobre" e fundo escuro
+if (sobreBtn && sobrePopup && popupBg && closePopup) {
+    sobreBtn.addEventListener('click', () => {
+        sobrePopup.style.display = 'flex';
+        popupBg.style.display = 'block';      // mostra fundo escuro
+        menuDropdown.style.display = 'none';  // fecha menu dropdown
+    });
+
+    closePopup.addEventListener('click', () => {
+        sobrePopup.style.display = 'none';
+        popupBg.style.display = 'none';       // esconde fundo escuro
+    });
+
+    // Fecha popup "Sobre" ao clicar no fundo escuro também (opcional)
+    popupBg.addEventListener('click', () => {
+        sobrePopup.style.display = 'none';
+        popupBg.style.display = 'none';
+    });
+}
+
+// Controle do popup "Contato"
+if (contatoBtn && contatoPopup && closeContatoPopup) {
+    contatoBtn.addEventListener('click', () => {
+        contatoPopup.style.display = 'flex';
+        popupBg.style.display = 'block';      // usa mesmo fundo escuro
+        menuDropdown.style.display = 'none';  // fecha menu dropdown
+    });
+
+    closeContatoPopup.addEventListener('click', () => {
+        contatoPopup.style.display = 'none';
+        popupBg.style.display = 'none';
+    });
+
+    // Fecha popup Contato ao clicar no fundo escuro (mesmo popupBg)
+    popupBg.addEventListener('click', () => {
+        if (contatoPopup.style.display === 'flex') {
+            contatoPopup.style.display = 'none';
+            popupBg.style.display = 'none';
+        }
+    });
+}
