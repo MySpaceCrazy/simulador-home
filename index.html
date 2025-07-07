@@ -15,6 +15,17 @@
         <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor" class="author-top">
     </a>
 
+    <!-- Botão Menu no canto direito -->
+    <div class="menu-icon" id="menuButton">☰</div>
+
+    <!-- Menu Suspenso -->
+    <div class="menu-dropdown" id="menuDropdown">
+        <a href="#" id="sobreBtn">ℹ️ Sobre os Simuladores</a>
+        <a href="arquivos/exemplo_2D_3D.xlsx" download>📁 Baixar Exemplo 2D/3D</a>
+        <a href="arquivos/exemplo_separacao.xlsx" download>📁 Baixar Exemplo Separação</a>
+        <a href="#" id="contatoBtn">📞 Contato</a>
+    </div>
+
     <div class="hero">
         <h1>Bem-vindo aos Meus Simuladores</h1>
         <p>Escolha uma das opções abaixo</p>
@@ -42,6 +53,67 @@
             <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
         </div>
     </section>
+
+    <!-- Popup Informativo -->
+    <div class="popup" id="sobrePopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2>ℹ️ Portal de Simuladores Operacionais</h2>
+            
+            <p>👋 Seja bem-vindo(a) ao portal de <strong>Simuladores Operacionais</strong>, um conjunto de ferramentas inteligentes focadas em otimizar processos logísticos e produtivos!</p>
+            
+            <h3>🚀 Funcionalidades Disponíveis:</h3>
+            
+            <ul>
+                <li>📦 <strong>Simulador de Caixas 2D:</strong><br>
+                Simula a montagem de caixas de forma otimizada, considerando apenas <em>largura</em> e <em>profundidade</em>. Ideal para situações onde a altura dos produtos não influencia no empacotamento.</li>
+                
+                <li>📏 <strong>Simulador de Caixas 3D:</strong><br>
+                Realiza empacotamento tridimensional, levando em conta <em>largura, profundidade e altura</em>. Essencial para simular carregamentos completos, transporte ou armazenamento.</li>
+                
+                <li>⏱️ <strong>Simulador de Separação:</strong><br>
+                Calcula o tempo e eficiência do processo de separação de produtos em esteiras, considerando estações, capacidade de caixas por estação e ritmo de separação. Ajuda a detectar gargalos e planejar melhor o fluxo.</li>
+            </ul>
+
+            <h3>📁 Arquivos de Exemplo:</h3>
+            <p>Para facilitar o uso dos simuladores, disponibilizamos arquivos prontos para teste:</p>
+            
+            <ul>
+                <li>🗂️ <strong>Exemplo 2D / 3D:</strong> Layout com colunas padrão de produto, dimensões e loja. Ideal para testar os simuladores de caixas.</li>
+                <li>🛠️ <strong>Exemplo Separação:</strong> Estrutura simulada de separação em esteira, com produtos, quantidades e estações configuradas.</li>
+            </ul>
+
+            <h3>💡 Recomendações:</h3>
+            <ul>
+                <li>⚠️ Respeite o formato dos arquivos de exemplo. Campos obrigatórios e estrutura devem ser mantidos para simulação correta.</li>
+                <li>📊 Simuladores otimizados para cenários logísticos comuns, porém podem ser ajustados conforme necessidade específica.</li>
+                <li>🔄 Atualizações e melhorias contínuas. Sempre que possível, consulte a última versão do portal.</li>
+            </ul>
+
+            <h3>📲 Dúvidas ou Sugestões:</h3>
+            <p>Você pode entrar em contato diretamente através do botão <strong>Contato</strong> no menu ou pelos links ao final da página.</p>
+
+            <p>🤝 Conte comigo para evoluir seus processos logísticos e operacionais!</p>
+        </div>
+    </div>
+    <div class="popup-bg" id="popupBg"></div>
+    <!-- Popup de Contato -->
+    <div class="popup" id="contatoPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeContatoPopup">&times;</span>
+            <h2>📞 Contato</h2>
+            <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
+            <ul>
+                <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com" target="_blank">📧</a></li>
+                <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a> <img src="images/IMG/github.png" alt="GitHub" style="width: 20px; height: 20px;"></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Matheus Flores de Oliveira</a> <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px;"></li>
+            </ul>
+            <p>Estou sempre aberto a sugestões e melhorias. Sua opinião é muito importante!</p>
+        </div>
+    </div>
+    
+    <!-- Botão Voltar ao Topo -->
+    <button id="scrollToTop" title="Voltar ao Topo">⬆️</button>
 
     <footer class="footer">
         <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
