@@ -173,6 +173,8 @@ footer .author-name, .footer .author-name {
     position: relative;
     box-shadow: 0 0 15px rgba(0,0,0,0.7);
     line-height: 1.5;
+    width: 100%; /* Garante que o conteúdo não estique além do necessário */
+    box-sizing: border-box;
 }
 .popup-content h2 { margin-top: 0; }
 .popup-content p { margin: 10px 0; }
