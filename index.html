@@ -33,134 +33,104 @@
 
     <section class="apps">
         <div class="app-card">
-            <img src="images/IMG/tamanho.png" alt="Simulador 2D" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/tamanho.png" alt="Simulador 2D">
             <h3>Simulador de Caixas 2D</h3>
             <p>Monte caixas otimizadas em 2D.</p>
             <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/dimensao.png" alt="Simulador 3D" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/dimensao.png" alt="Simulador 3D">
             <h3>Simulador de Caixas 3D</h3>
             <p>Empacotamento otimizado em 3D.</p>
             <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/pacotes.png" alt="Simulador de Separação" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/pacotes.png" alt="Simulador de Separação">
             <h3>Simulador de Separação</h3>
             <p>Simule o tempo e eficiência da separação.</p>
             <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
         </div>
     </section>
 
-    <!-- Popup Informativo -->
+    <!-- Popup Informativo Sobre -->
     <div class="popup" id="sobrePopup">
         <div class="popup-content">
             <span class="close-btn" id="closePopup">&times;</span>
             <h2>ℹ️ Portal de Simuladores Operacionais</h2>
-            
             <p>👋 Seja bem-vindo(a) ao portal de <strong>Simuladores Operacionais</strong>, um conjunto de ferramentas inteligentes focadas em otimizar processos logísticos e produtivos!</p>
-            
             <h3>🚀 Funcionalidades Disponíveis:</h3>
-            
             <ul>
-                <li>📦 <strong>Simulador de Caixas 2D:</strong><br>
-                Simula a montagem de caixas de forma otimizada, considerando apenas <em>largura</em> e <em>profundidade</em>. Ideal para situações onde a altura dos produtos não influencia no empacotamento.</li>
-                
-                <li>📏 <strong>Simulador de Caixas 3D:</strong><br>
-                Realiza empacotamento tridimensional, levando em conta <em>largura, profundidade e altura</em>. Essencial para simular carregamentos completos, transporte ou armazenamento.</li>
-                
-                <li>⏱️ <strong>Simulador de Separação:</strong><br>
-                Calcula o tempo e eficiência do processo de separação de produtos em esteiras, considerando estações, capacidade de caixas por estação e ritmo de separação. Ajuda a detectar gargalos e planejar melhor o fluxo.</li>
+                <li>📦 <strong>Simulador de Caixas 2D:</strong> Simula a montagem de caixas considerando largura e profundidade.</li>
+                <li>📏 <strong>Simulador de Caixas 3D:</strong> Empacotamento tridimensional para transporte ou armazenamento.</li>
+                <li>⏱️ <strong>Simulador de Separação:</strong> Calcula o tempo e eficiência de separação em esteiras logísticas.</li>
             </ul>
-
             <h3>📁 Arquivos de Exemplo:</h3>
-            <p>Para facilitar o uso dos simuladores, disponibilizamos arquivos prontos para teste:</p>
-            
             <ul>
-                <li>🗂️ <strong>Exemplo 2D / 3D:</strong> Layout com colunas padrão de produto, dimensões e loja. Ideal para testar os simuladores de caixas.</li>
-                <li>🛠️ <strong>Exemplo Separação:</strong> Estrutura simulada de separação em esteira, com produtos, quantidades e estações configuradas.</li>
+                <li>🗂️ Exemplo 2D/3D: Layout padrão de produtos.</li>
+                <li>🛠️ Exemplo Separação: Estrutura simulada de esteiras e estações.</li>
             </ul>
-
             <h3>💡 Recomendações:</h3>
             <ul>
-                <li>⚠️ Respeite o formato dos arquivos de exemplo. Campos obrigatórios e estrutura devem ser mantidos para simulação correta.</li>
-                <li>📊 Simuladores otimizados para cenários logísticos comuns, porém podem ser ajustados conforme necessidade específica.</li>
-                <li>🔄 Atualizações e melhorias contínuas. Sempre que possível, consulte a última versão do portal.</li>
+                <li>⚠️ Respeite o formato dos arquivos.</li>
+                <li>📊 Simuladores otimizados para cenários comuns, ajustáveis conforme a necessidade.</li>
             </ul>
-
-            <h3>📲 Dúvidas ou Sugestões:</h3>
-            <p>Você pode entrar em contato diretamente através do botão <strong>Contato</strong> no menu ou pelos links ao final da página.</p>
-
-            <p>🤝 Conte comigo para evoluir seus processos logísticos e operacionais!</p>
+            <p>Para dúvidas ou sugestões, utilize o botão <strong>Contato</strong>.</p>
         </div>
     </div>
+
+    <!-- Fundo Escuro para Popups -->
     <div class="popup-bg" id="popupBg"></div>
 
-    <!-- Botão Voltar ao Topo -->
+    <!-- Popup de Contato -->
+    <div class="popup" id="contatoPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeContatoPopup">&times;</span>
+            <h2>📞 Contato</h2>
+            <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
+            <ul>
+                <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com">📧</a></li>
+                <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Oliveira</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ajuda Popup -->
+    <div class="help-popup-bg" id="helpPopupBg"></div>
+    <div class="help-popup" id="helpPopup">
+        <div class="popup-content">
+            <h2>Como Usar os Simuladores</h2>
+            <ol>
+                <li>Escolha o simulador desejado abaixo.</li>
+                <li>Clique em "Abrir App" para acessar.</li>
+                <li>Faça upload dos arquivos conforme instruções dos simuladores.</li>
+            </ol>
+            <button id="closeHelpPopup" class="btn btn-close">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Botões Flutuantes -->
     <button id="scrollToTop" title="Voltar ao Topo">🔝</button>
     <button id="helpButton" class="help-btn" title="Ajuda">❓</button>
+
+    <!-- Rodapé -->
     <footer class="footer">
         <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
         <p class="author-name">Ânderson Oliveira</p>
         <p>Engenheiro de Dados | Soluções Logísticas | Automações</p>
         <div>
             <a href="https://github.com/MySpaceCrazy" target="_blank">
-                <img src="images/IMG/github.png" alt="GitHub" style="width: 32px; height: 32px; margin-right: 10px;">
+                <img src="images/IMG/github.png" alt="GitHub" style="width: 32px;">
             </a>
             <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
-                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px; height: 32px;">
+                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px;">
             </a>
-        </div>
-
-            <!-- Popup de Contato -->
-        <div class="popup" id="contatoPopup">
-            <div class="popup-content">
-                <span class="close-btn" id="closeContatoPopup">&times;</span>
-                <h2>📞 Contato</h2>
-                <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
-                <ul>
-                    <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com" target="_blank">📧</a></li>
-                    <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a> <img src="images/IMG/github.png" alt="GitHub" style="width: 20px; height: 20px;"></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Matheus Flores de Oliveira</a> <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px;"></li>
-                </ul>
-                <p>Estou sempre aberto a sugestões e melhorias. Sua opinião é muito importante!</p>
-            </div>
-        </div>
-        <div class="help-popup-bg" id="helpPopupBg"></div>
-        <div class="help-popup" id="helpPopup">
-            <div class="popup-content">
-                <h2>Como Usar os Simuladores</h2>
-                <p>Para utilizar os simuladores, siga os passos abaixo:</p>
-                <ol>
-                    <li>Escolha o simulador desejado na seção "Simuladores Disponíveis".</li>
-                    <li>Clique no botão "Abrir App" para acessar o simulador online.</li>
-                    <li>Para o Simulador de Caixas 2D e 3D, você pode fazer upload de um arquivo Excel com as dimensões dos produtos.</li>
-                    <li>No Simulador de Separação, insira as informações sobre as estações de separação, produtos e quantidades.</li>
-                    <li>Após inserir os dados, clique no botão "Simular" para ver os resultados.</li>
-                    <li>Você pode baixar os arquivos de exemplo disponíveis no menu para entender melhor o formato esperado.</li>
-                </ol>
-                <p>Se precisar de ajuda adicional, entre em contato através do botão "Contato" no menu.</p>
-                <button id="closeHelpPopup" class="btn btn-close">Fechar</button>
-            </div>
         </div>
         <p class="footer-text">© 2024 Ânderson Oliveira. Todos os direitos reservados.</p>
     </footer>
-            <!-- Popup de Contato -->
-        <div class="popup" id="contatoPopup">
-            <div class="popup-content">
-                <span class="close-btn" id="closeContatoPopup">&times;</span>
-                <h2>📞 Contato</h2>
-                <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
-                <ul>
-                    <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com" target="_blank">📧</a></li>
-                    <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a> <img src="images/IMG/github.png" alt="GitHub" style="width: 20px; height: 20px;"></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Matheus Flores de Oliveira</a> <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px;"></li>
-                </ul>
-                <p>Estou sempre aberto a sugestões e melhorias. Sua opinião é muito importante!</p>
-            </div>
-        </div>
+
 <script src="script.js"></script>
 </body>
 </html>
