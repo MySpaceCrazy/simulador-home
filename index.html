@@ -1,42 +1,41 @@
-<!-- File: index.html -->
-<!-- +++ b/file:///c%3A/Users/anderson.oliveira5/Downloads/Automa%C3%A7%C3%B5es/Simulador-home/index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simuladores operacionais</title>
+    <title>Simuladores Operacionais</title>
+    <meta name="description" content="Acesse simuladores de logística e automações desenvolvidos por Ânderson Oliveira. Otimize operações em 2D, 3D e processos de separação.">
+    <meta name="author" content="Ânderson Oliveira">
     <link rel="icon" type="image/x-icon" href="images/ICO/producao.ico">
-    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> # Se for PNG, use esta linha -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #000000;
-            color: #222;
+            background: linear-gradient(135deg, #6e00ff, #0099ff);
+            color: white;
             overflow-x: hidden;
         }
 
         .hero {
-            height: 100vh;
-            background: url("images/IMG/3607424.jpg") no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: rgb(255, 255, 255);
+            height: 100vh;
+            background: url('images/IMG/3607424.jpg') no-repeat center center/cover;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .hero h1 {
             font-size: 3rem;
-            margin: 0;
+            margin-bottom: 10px;
+            transition: opacity 0.3s;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-top: 10px;
         }
 
         .apps-section {
@@ -48,28 +47,35 @@
         }
 
         .app-card {
-            width: 280px;
-            background-color: #f6f6f6;
+            background: white;
+            color: #333;
             border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            width: 280px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             transition: transform 0.3s;
         }
 
         .app-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
+        }
+
+        .app-card img {
+            width: 100px;
+            margin-bottom: 15px;
         }
 
         .app-card h3 {
             margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
         .app-card a {
             display: inline-block;
             margin-top: 12px;
             padding: 8px 16px;
-            background-color: #007bff;
+            background: #007bff;
             color: white;
             border-radius: 8px;
             text-decoration: none;
@@ -77,13 +83,13 @@
         }
 
         .app-card a:hover {
-            background-color: #0056b3;
+            background: #0056b3;
         }
 
         .author {
             padding: 40px 20px;
             text-align: center;
-            background-color: #000000;
+            background-color: #000;
             color: white;
         }
 
@@ -93,25 +99,33 @@
             border-radius: 50%;
         }
 
-        .author p {
+        .author-name {
             margin-top: 15px;
-            font-size: 1rem;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .app-card {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
-
-<style>
-    .author-name {
-        font-weight: bold;
-        font-size: 1.4rem;
-        color: white;
-    }
-</style>
-   
 </head>
 <body>
-
-    <!--<img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor" class="author-top"> -->
-
     <div class="hero">
         <h1>Bem-vindo aos Meus Simuladores</h1>
         <p>Escolha uma das opções abaixo</p>
@@ -119,21 +133,21 @@
 
     <div class="apps-section">
         <div class="app-card">
-            <img src="images/IMG/tamanho.png" alt="Simulador 2D" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/tamanho.png" alt="Simulador 2D">
             <h3>Simulador de Caixas 2D</h3>
             <p>Monte caixas otimizadas em 2D.</p>
             <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/dimensao.png" alt="Simulador 3D" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/dimensao.png" alt="Simulador 3D">
             <h3>Simulador de Caixas 3D</h3>
             <p>Empacotamento otimizado em 3D.</p>
             <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/pacotes.png" alt="Simulador de Separação" style="width: 100px; margin-bottom: 15px;">
+            <img src="images/IMG/pacotes.png" alt="Simulador de Separação">
             <h3>Simulador de Separação</h3>
             <p>Simule o tempo e eficiência da separação.</p>
             <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
@@ -142,24 +156,26 @@
 
     <div class="author">
         <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
-            <div  class="author-name">
-                </p>Ânderson Oliveira</p>
-            </div>    
+        <div class="author-name">Ânderson Oliveira</div>
         <p>Engenheiro de Dados</p>
         <p>Análise e Desenvolvimento de Sistemas</p>
         <p>Desenvolvedor de soluções em logística e automações</p>
         <div style="margin: 10px 0;">
             <a href="https://github.com/MySpaceCrazy" target="_blank">
-                <img src="images/IMG/github.png" alt="GitHub" style="width: 32px; height: 32px; margin-right: 10px;">
+                <img src="images/IMG/github.png" alt="GitHub" style="width:32px; margin-right:10px;">
             </a>
             <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
-                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px; height: 32px;">
+                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width:32px;">
             </a>
         </div>
-
-        
     </div>
 
-
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".hero h1");
+            header.style.opacity = window.scrollY > 50 ? "0.5" : "1";
+        });
+    </script>
 </body>
 </html>
+

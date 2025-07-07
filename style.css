@@ -2,8 +2,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 body {
     margin: 0;
@@ -14,7 +12,7 @@ body {
 }
 
 .hero {
-    position: relative;  /* IMPORTANTE: para posicionar elementos filhos absolutamente */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,32 +21,22 @@ body {
     background-size: cover;
     flex-direction: column;
     animation: fadeIn 2s ease-in-out;
-}
-
-.author-top {
-    position: fixed; /* Mantém no canto superior mesmo ao rolar a página */
-    top: 20px;
-    left: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Garante que fique na frente do fundo */
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    transition: opacity 0.5s ease;
 }
 
-.section {
-    padding: 80px 20px;
-    text-align: center;
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
-.apps {
+.apps-section {
+    padding: 60px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,119 +44,81 @@ body {
 }
 
 .app-card {
-    background: white;
+    width: 280px;
+    background-color: #f6f6f6;
     color: #333;
     border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 280px;
-    transition: transform 0.3s;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .app-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.app-card img {
+    width: 100px;
+    margin-bottom: 15px;
 }
 
 .app-card h3 {
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-
-.footer {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.footer img {
-    width: 120px;
-    border-radius: 50%;
     margin-bottom: 10px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-/* <!-- =========== --> */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #6e00ff, #0099ff);
+.app-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #007bff;
     color: white;
-    overflow-x: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
-/*.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('images/transition.gif') no-repeat center center;
-    background-size: cover;
-    flex-direction: column;
-    animation: fadeIn 2s ease-in-out;
-}*/
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.app-card a:hover {
+    background-color: #0056b3;
 }
 
-.section {
-    padding: 80px 20px;
+.author {
+    padding: 40px 20px;
     text-align: center;
+    background-color: #000;
+    color: white;
 }
 
-.apps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.app-card {
-    background: white;
-    color: #333;
-    border-radius: 16px;
-    padding: 20px;
-    width: 280px;
-    transition: transform 0.3s;
-}
-
-.app-card:hover {
-    transform: translateY(-10px);
-}
-
-.app-card h3 {
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-
-.footer {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.footer img {
+.author img {
     width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
 .author-name {
     font-weight: bold;
-    font-size: 1.3rem, 20px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.author p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-/* File: input */
-/* --- a/vscode-scm:git/scm0/input?rootUri%3Dfile%253A%252F%252F%252Fc%25253A%252FUsers%252Fanderson.oliveira5%252FDownloads%252FAutoma%2525C3%2525A7%2525C3%2525B5es%252FSimulador-home */
-/* +++ b/vscode-scm:git/scm0/input?rootUri%3Dfile%253A%252F%252F%252Fc%25253A%252FUsers%252Fanderson.oliveira5%252FDownloads%252FAutoma%2525C3%2525A7%2525C3%2525B5es%252FSimulador-home */
-/* @@ -1,1 +1,1 @@ */
-/* + */
-/* -A --- IGNORE --- */
-/* End of recent edits */
-/* File: input */
-/* --- a/vscode-scm:git/scm0/input?rootUri%3Dfile%253A%252F%252F%252Fc%25253A%252F
