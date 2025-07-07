@@ -185,12 +185,15 @@ body {
 .popup-content {
     background: #000;
     color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    max-width: 400px;
+    max-width: 70%; /* 400px para 70% da tela */
+    max-height: 80%; /* altura máxima para 80% da tela */
+    overflow-y: auto; /* rolagem vertical se o conteúdo ultrapassar a altura */
     text-align: left;
     position: relative;
     box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    line-height: 1.5; /* espaçamento entre as linhas do texto */
 }
 
 .close-btn {
