@@ -21,6 +21,21 @@ body {
     text-align: center;
 }
 
+.author-top {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    cursor: pointer;
+    background-color: black;
+}
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
