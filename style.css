@@ -210,8 +210,6 @@ footer .author-name, .footer .author-name {
 /* Botões flutuantes */
 #scrollToTop, .help-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     z-index: 1000;
     border: none;
     border-radius: 50%;
@@ -220,7 +218,11 @@ footer .author-name, .footer .author-name {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.3s;
 }
+
+/* Botão Voltar ao Topo */
 #scrollToTop {
+    bottom: 20px;
+    right: 20px;
     padding: 12px 16px;
     background-color: #007bff;
     display: none;
@@ -229,12 +231,16 @@ footer .author-name, .footer .author-name {
 #scrollToTop:hover { background-color: #0056b3; transform: translateY(-3px); }
 #scrollToTop:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
+/* Botão Ajuda acima do Voltar ao Topo */
 .help-btn {
+    bottom: 80px;
+    right: 20px;
     background-color: #28a745;
     padding: 12px 16px;
 }
 .help-btn:hover { background-color: #218838; transform: translateY(-3px); }
 .help-btn:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+
 
 /* Animações */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
