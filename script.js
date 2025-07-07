@@ -1,4 +1,4 @@
-/** script.js - Portal Simuladores **/
+// Efeito simples de opacidade no título ao rolar a página
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".hero h1");
     if (window.scrollY > 50) {
