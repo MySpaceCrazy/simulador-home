@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/transition.gif') no-repeat center center;
+    background: url('images/projeto-futurista-fundo/3607424.jpg') no-repeat center center;
     background-size: cover;
     flex-direction: column;
     animation: fadeIn 2s ease-in-out;
