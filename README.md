@@ -41,9 +41,6 @@ Simule tempo de separação, gargalos e eficiência de esteiras ou processos log
 ┣ 📄 script.js → Animações e interações
 
 yaml
-Copiar
-Editar
-
 ---
 
 ## 🌟 Funcionalidades
