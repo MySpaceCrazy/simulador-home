@@ -20,12 +20,10 @@ body {
     animation: fadeIn 2s ease-in-out;
     text-align: center;
 }
-
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-
 .hero p {
     font-size: 1.2rem;
 }
@@ -50,29 +48,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 340px; /* Define altura padrão do card */
+    height: 340px;
 }
-
 .app-card img {
     width: 100px;
     margin: 0 auto 15px auto;
 }
-
 .app-card:hover {
     transform: translateY(-10px);
 }
-
 .app-card h3 {
     margin-top: 10px;
     font-size: 1.2rem;
-    min-height: 50px; /* Garante altura para título */
+    min-height: 50px;
 }
-
 .app-card p {
     font-size: 1rem;
-    min-height: 50px; /* Garante altura para descrição */
+    min-height: 50px;
 }
-
 .app-card a {
     display: inline-block;
     margin-top: 12px;
@@ -84,7 +77,6 @@ body {
     transition: background 0.3s;
     align-self: center;
 }
-
 .app-card a:hover {
     background-color: #0056b3;
 }
@@ -96,13 +88,11 @@ body {
     background-color: #000;
     color: white;
 }
-
 .footer img {
     width: 120px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
-
 .author-name {
     font-weight: bold;
     font-size: 1.4rem;
@@ -121,6 +111,19 @@ body {
     z-index: 999;
     background-color: black;
     cursor: pointer;
+}
+.author-top:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.author-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.author-top img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 @keyframes fadeIn {
@@ -142,6 +145,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
+.menu-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.menu-icon:active {
+    background: rgba(255, 255, 255, 0.2);
+}
 
 .menu-dropdown {
     position: fixed;
@@ -156,7 +165,9 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 999;
 }
-
+.menu-dropdown.show {
+    display: flex;
+}
 .menu-dropdown a {
     color: white;
     padding: 8px 12px;
@@ -164,7 +175,6 @@ body {
     display: block;
     border-bottom: 1px solid #333;
 }
-
 .menu-dropdown a:hover {
     background: #222;
 }
@@ -181,21 +191,19 @@ body {
     align-items: center;
     z-index: 1001;
 }
-
 .popup-content {
     background: #000;
     color: white;
     padding: 30px;
     border-radius: 15px;
-    max-width: 70%; /* 400px para 70% da tela */
-    max-height: 80%; /* altura máxima para 80% da tela */
-    overflow-y: auto; /* rolagem vertical se o conteúdo ultrapassar a altura */
+    max-width: 70%;
+    max-height: 80%;
+    overflow-y: auto;
     text-align: left;
     position: relative;
     box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    line-height: 1.5; /* espaçamento entre as linhas do texto */
+    line-height: 1.5;
 }
-
 .close-btn {
     position: absolute;
     top: 10px;
@@ -254,17 +262,6 @@ body {
 .popup-content .btn-close:hover {
     background-color: #c82333;
 }
-.menu-icon:hover,
-.menu-dropdown a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-.menu-icon:active,
-.menu-dropdown a:active {
-    background: rgba(255, 255, 255, 0.2);
-}
-.menu-dropdown.show {
-    display: flex;
-}
 
 /* Botão Voltar ao Topo */
 #scrollToTop {
@@ -280,39 +277,22 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    display: none; /* Começa invisível */
+    display: none;
     transition: opacity 0.3s, transform 0.3s;
 }
-
-/* Quando o botão estiver visível */
 #scrollToTop.show {
     display: block;
 }
-
-/* Efeito hover */
 #scrollToTop:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
 }
-/* Efeito ativo */
 #scrollToTop:active {
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-/* Texto do rodapé */
-.footer-text {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #ccc;
-}
-.footer-text a {
-    color: #007bff;
-    text-decoration: none;
-}
-.footer-text a:hover {
-    text-decoration: underline;
-}
-/* Estilo do botão de ajuda */
+
+/* Botão de ajuda */
 .help-btn {
     position: fixed;
     bottom: 20px;
@@ -337,7 +317,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo do popup de ajuda */
+/* Popup de ajuda */
 .help-popup {
     position: fixed;
     top: 0;
@@ -355,9 +335,9 @@ body {
     color: white;
     padding: 30px;
     border-radius: 15px;
-    max-width: 500px; /* Largura máxima do popup */
-    max-height: 80%; /* Altura máxima do popup */
-    overflow-y: auto; /* Rolagem vertical se necessário */
+    max-width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
     text-align: left;
     position: relative;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -420,7 +400,8 @@ body {
 .help-popup .popup-content .btn-close:hover {
     background-color: #c82333;
 }
-/* Estilo do texto de rodapé */
+
+/* Texto do rodapé */
 .footer-text {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -433,6 +414,25 @@ body {
 .footer-text a:hover {
     text-decoration: underline;
 }
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+footer img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+footer .author-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
 /* Estilo do rodapé */
 footer {
     margin-top: 50px;
