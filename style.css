@@ -238,7 +238,7 @@ footer .author-name, .footer .author-name {
     background-color: #4394e5;
     padding: 12px 16px;
 }
-.help-btn:hover { background-color: #218838; transform: translateY(-3px); }
+.help-btn:hover { background-color: #ffffff; transform: translateY(-3px); }
 .help-btn:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
 
