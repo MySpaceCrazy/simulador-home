@@ -1,4 +1,4 @@
-// Reduz opacidade do título ao rolar a página
+/** script.js - Portal Simuladores **/
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".hero h1");
     if (window.scrollY > 50) {

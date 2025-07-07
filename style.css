@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+/** style.css - Portal de Simuladores **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
     margin: 0;
@@ -12,7 +10,6 @@ body {
 }
 
 .hero {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,45 +24,42 @@ body {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    transition: opacity 0.5s ease;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-top: 10px;
 }
 
-.apps-section {
-    padding: 60px 20px;
+.apps {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    padding: 60px 20px;
 }
 
 .app-card {
-    width: 280px;
-    background-color: #f6f6f6;
+    background: white;
     color: #333;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    width: 280px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .app-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.app-card img {
-    width: 100px;
-    margin-bottom: 15px;
+    transform: translateY(-10px);
 }
 
 .app-card h3 {
-    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.app-card p {
+    font-size: 1rem;
 }
 
 .app-card a {
@@ -83,39 +77,23 @@ body {
     background-color: #0056b3;
 }
 
-.author {
+.footer {
+    margin-top: 50px;
     padding: 40px 20px;
     text-align: center;
     background-color: #000;
     color: white;
 }
 
-.author img {
+.footer img {
     width: 120px;
-    height: 120px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .author-name {
     font-weight: bold;
     font-size: 1.4rem;
-    margin-top: 10px;
-}
-
-.author p {
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    margin: 0 8px;
-    transition: transform 0.3s;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
 }
 
 @keyframes fadeIn {

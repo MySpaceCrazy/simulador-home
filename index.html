@@ -4,178 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simuladores Operacionais</title>
-    <meta name="description" content="Acesse simuladores de logística e automações desenvolvidos por Ânderson Oliveira. Otimize operações em 2D, 3D e processos de separação.">
-    <meta name="author" content="Ânderson Oliveira">
     <link rel="icon" type="image/x-icon" href="images/ICO/producao.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #6e00ff, #0099ff);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background: url('images/IMG/3607424.jpg') no-repeat center center/cover;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            transition: opacity 0.3s;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        .apps-section {
-            padding: 60px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .app-card {
-            background: white;
-            color: #333;
-            border-radius: 16px;
-            padding: 20px;
-            width: 280px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-
-        .app-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .app-card img {
-            width: 100px;
-            margin-bottom: 15px;
-        }
-
-        .app-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .app-card a {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 8px 16px;
-            background: #007bff;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .app-card a:hover {
-            background: #0056b3;
-        }
-
-        .author {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #000;
-            color: white;
-        }
-
-        .author img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-        }
-
-        .author-name {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 1.4rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 600px) {
-            .app-card {
-                width: 90%;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Ícone superior opcional -->
+    <!--<img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor" class="author-top"> -->
+
     <div class="hero">
         <h1>Bem-vindo aos Meus Simuladores</h1>
         <p>Escolha uma das opções abaixo</p>
     </div>
 
-    <div class="apps-section">
+    <section class="apps">
         <div class="app-card">
-            <img src="images/IMG/tamanho.png" alt="Simulador 2D">
+            <img src="images/IMG/tamanho.png" alt="Simulador 2D" style="width: 100px; margin-bottom: 15px;">
             <h3>Simulador de Caixas 2D</h3>
             <p>Monte caixas otimizadas em 2D.</p>
             <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/dimensao.png" alt="Simulador 3D">
+            <img src="images/IMG/dimensao.png" alt="Simulador 3D" style="width: 100px; margin-bottom: 15px;">
             <h3>Simulador de Caixas 3D</h3>
             <p>Empacotamento otimizado em 3D.</p>
             <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
         <div class="app-card">
-            <img src="images/IMG/pacotes.png" alt="Simulador de Separação">
+            <img src="images/IMG/pacotes.png" alt="Simulador de Separação" style="width: 100px; margin-bottom: 15px;">
             <h3>Simulador de Separação</h3>
             <p>Simule o tempo e eficiência da separação.</p>
             <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
         </div>
-    </div>
+    </section>
 
-    <div class="author">
+    <footer class="footer">
         <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
-        <div class="author-name">Ânderson Oliveira</div>
-        <p>Engenheiro de Dados</p>
-        <p>Análise e Desenvolvimento de Sistemas</p>
-        <p>Desenvolvedor de soluções em logística e automações</p>
-        <div style="margin: 10px 0;">
+        <p class="author-name">Ânderson Oliveira</p>
+        <p>Engenheiro de Dados | Soluções Logísticas | Automações</p>
+        <div>
             <a href="https://github.com/MySpaceCrazy" target="_blank">
                 <img src="images/IMG/github.png" alt="GitHub" style="width: 32px; height: 32px; margin-right: 10px;">
             </a>
             <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
-                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px; height: 32px; margin-right: 10px;">
+                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px; height: 32px;">
             </a>
         </div>
-    </div>
+    </footer>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            const header = document.querySelector(".hero h1");
-            header.style.opacity = window.scrollY > 50 ? "0.5" : "1";
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
-
