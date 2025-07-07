@@ -336,6 +336,7 @@ body {
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+
 /* Estilo do popup de ajuda */
 .help-popup {
     position: fixed;
@@ -432,4 +433,303 @@ body {
 .footer-text a:hover {
     text-decoration: underline;
 }
+/* Estilo do rodapé */
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+footer img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+footer .author-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.author-top {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    background-color: black;
+    cursor: pointer;
+}
+.author-top:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.author-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.author-top img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
 
+.help-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+.help-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0.3);
+}
+/* Estilo do popup de ajuda */
+.help-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+.help-popup .popup-content {
+    background: #000;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px; /* Largura máxima do popup */
+    max-height: 80%; /* Altura máxima do popup */
+    overflow-y: auto; /* Rolagem vertical se necessário */
+    text-align: left;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.help-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.help-popup .popup-content h2 {
+    margin-top: 0;
+}
+.help-popup .popup-content p {
+    margin: 10px 0;
+}
+.help-popup .popup-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+.help-popup .popup-content a:hover {
+    text-decoration: underline;
+}
+.help-popup .popup-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.help-popup .popup-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.help-popup .popup-content li {
+    margin-bottom: 10px;
+}
+.help-popup .popup-content li a {
+    color: #007bff;
+    text-decoration: none;
+}
+.help-popup .popup-content li a:hover {
+    text-decoration: underline;
+}
+.help-popup .popup-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.help-popup .popup-content .btn:hover {
+    background-color: #0056b3;
+}
+.help-popup .popup-content .btn-close {
+    background-color: #dc3545;
+}
+.help-popup .popup-content .btn-close:hover {
+    background-color: #c82333;
+}
+/* Estilo do texto de rodapé */
+.footer-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+.footer-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer-text a:hover {
+    text-decoration: underline;
+}
+/* Estilo do rodapé */
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+footer img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+footer .author-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.author-top {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    background-color: black;
+    cursor: pointer;
+}
+.author-top:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.author-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.author-top img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+/* Estilo do botão de ajuda */
+.help-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.help-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+.help-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0.3);
+}
+/* Estilo do popup de ajuda */
+.help-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+.help-popup .popup-content {
+    background: #000;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px; /* Largura máxima do popup */
+    max-height: 80%; /* Altura máxima do popup */
+    overflow-y: auto; /* Rolagem vertical se necessário */
+    text-align: left;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.help-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.help-popup .popup-content h2 {
+    margin-top: 0;
+}
+.help-popup .popup-content p {
+    margin: 10px 0;
+}
+.help-popup .popup-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+.help-popup .popup-content a:hover {
+    text-decoration: underline;
+}
+.help-popup .popup-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.help-popup .popup-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.help-popup .popup-content li {
+    margin-bottom: 10px;
+}
+.help-popup .popup-content li a {
+    color: #007bff;
+    text-decoration: none;
+}
+.help-popup .popup-content li a:hover {
+    text-decoration: underline;
+}
+.help-popup .popup-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.help-popup .popup-content .btn:hover {
+    background-color: #0056b3;
+}
+.help-popup .popup-content .btn-close {
+    background-color: #dc3545;
+}
+.help-popup .popup-content .btn-close:hover {
+    background-color: #c82333;
+}
