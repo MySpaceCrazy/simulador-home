@@ -47,6 +47,7 @@ body {
     justify-content: space-between;
     height: 340px;
 }
+
 .app-card img { width: 100px; margin: 0 auto 15px auto; }
 .app-card:hover { transform: translateY(-10px); }
 .app-card h3 { margin-top: 10px; font-size: 1.2rem; min-height: 50px; }
@@ -64,6 +65,20 @@ body {
 }
 .app-card a:hover { background-color: #0056b3; }
 
+.app-card-bin {
+    background: white;
+    color: #333;
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px;
+}
 /* Rodapé */
 footer, .footer {
     margin-top: 50px;
