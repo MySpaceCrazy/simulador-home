@@ -55,8 +55,8 @@
 
         <div class="app-card-bin">
             <img src="images/IMG/CP-6423-01.png" alt="Simulador de Bins">
-            <h3>Simulador de Separação</h3>
-            <p>Simule o tempo e eficiência da separação.</p>
+            <h3>Simulador de Bins</h3>
+            <p>Calcule a quantidade de bins necessária por posição. Otimize o espaço e evite rupturas no picking.</p>
             <a href="https://simuladorbin.streamlit.app/" target="_blank">Abrir App</a>
         </div>
 
@@ -73,17 +73,37 @@
             <h3>🚀 Funcionalidades Disponíveis:</h3>
             
             <ul>
-                <li>📦 <strong>Simulador de Caixas 2D:</strong><br>
+                <li> <img src="images/IMG/tamanho.png" style="width: 24px; vertical-align: middle;"> <strong>Simulador de Caixas 2D:</strong><br>
                 Simula a montagem de caixas de forma otimizada, considerando apenas <em>largura</em> e <em>profundidade</em>. Ideal para situações onde a altura dos produtos não influencia no empacotamento.</li>
                 
-                <li>📏 <strong>Simulador de Caixas 3D:</strong><br>
+                <li> <img src="images/IMG/dimensao.png" style="width: 24px; vertical-align: middle;"> <strong>Simulador de Caixas 3D:</strong><br>
                 Realiza empacotamento tridimensional, levando em conta <em>largura, profundidade e altura</em>. Essencial para simular carregamentos completos, transporte ou armazenamento.</li>
                 
-                <li>⏱️ <strong>Simulador de Separação:</strong><br>
+                <li> <img src="images/IMG/pacotes.png" style="width: 24px; vertical-align: middle;"> <strong>Simulador de Separação:</strong><br>
                 Calcula o tempo e eficiência do processo de separação de produtos em esteiras, considerando estações, capacidade de caixas por estação e ritmo de separação. Ajuda a detectar gargalos e planejar melhor o fluxo.</li>
             
                 <li> <img src="images/IMG/CP-6423-01.png" style="width: 24px; vertical-align: middle;"> <strong>Simulador de Bins:</strong><br>
-                Calcula o tempo e eficiência do processo de separação de produtos em esteiras, considerando estações, capacidade de caixas por estação e ritmo de separação. Ajuda a detectar gargalos e planejar melhor o fluxo.</li>
+                O Simulador de Bins de Picking é uma ferramenta desenvolvida para calcular automaticamente a quantidade necessária de bins (caixas de abastecimento) para armazenar os produtos em posições de picking no armazém. 
+                Com base em informações de produtos, volumes e posições cadastradas no banco de dados, o simulador realiza as seguintes operações:
+                ✔️ Calcula o número de bins necessários por produto e posição, respeitando os volumes máximos permitidos por cada tipo de bin.
+
+                ✔️ Compara a quantidade de bins necessárias com a quantidade disponível em cada posição do picking.
+
+                ✔️ Gera relatórios detalhados por produto, posição e estrutura, indicando:
+
+                Se a posição atende ou não à demanda de bins.
+
+                Quantidade total de itens e volume movimentado.
+
+                Capacidade máxima de volumetria das bins disponíveis.
+
+                ✔️ Apresenta resumos por estrutura, facilitando a visualização rápida de:
+
+                Posições que não atendem à demanda (falta de bins).
+
+                Posições que atendem à demanda (bins suficientes).
+                ✔️ Permite ajustes manuais nas quantidades de bins, caso necessário, para atender a demandas específicas.            
+                </li>
             
             </ul>
 
