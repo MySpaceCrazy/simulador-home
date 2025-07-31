@@ -315,7 +315,7 @@ footer .author-name, .footer .author-name {
     display: none;
 }
 #scrollToTop.show { display: block; }
-#scrollToTop:hover { background-color: #0056b3; transform: translateY(-3px); }
+#scrollToTop:hover { background-color: #e4f129; transform: translateY(-3px); }
 #scrollToTop:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
 /* Botão Ajuda acima do Voltar ao Topo */
