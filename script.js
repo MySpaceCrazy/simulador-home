@@ -269,13 +269,37 @@ if (contatoBtn && contatoPopup && closeContatoPopup) {
     });
 }
 
-// Auto scroll para os simuladores após alguns segundos
+// Função de rolagem lenta personalizada
+function scrollToElementSlow(element, duration = 4000) {
+  const start = window.scrollY;
+  const end = element.getBoundingClientRect().top + window.scrollY;
+  const distance = end - start;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    // Movimento suave (ease-in-out)
+    const ease = progress < 0.5
+      ? 2 * progress * progress
+      : -1 + (4 - 2 * progress) * progress;
+
+    window.scrollTo(0, start + distance * ease);
+
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// Auto scroll após carregar a página
 window.addEventListener('load', () => {
   setTimeout(() => {
     const simuladores = document.querySelector('.apps');
     if (simuladores) {
-      simuladores.scrollIntoView({ behavior: 'smooth' });
+      scrollToElementSlow(simuladores, 4000); // 4s de rolagem
     }
-  }, 3000); // 3 segundos de delay
+  }, 3000); // 3s de delay antes de começar
 });
- 
