@@ -301,5 +301,5 @@ window.addEventListener('load', () => {
     if (simuladores) {
       scrollToElementSlow(simuladores, 4000); // 4s de rolagem
     }
-  }, 3000); // 3s de delay antes de começar
+  }, 2000); // 3s de delay antes de começar
 });
