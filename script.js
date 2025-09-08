@@ -268,3 +268,14 @@ if (contatoBtn && contatoPopup && closeContatoPopup) {
         }
     });
 }
+
+// Auto scroll para os simuladores após alguns segundos
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const simuladores = document.querySelector('.apps');
+    if (simuladores) {
+      simuladores.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 3000); // 3 segundos de delay
+});
+ 
