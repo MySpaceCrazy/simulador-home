@@ -1,88 +1,199 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Simuladores</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores Operacionais</title>
+    <link rel="icon" type="image/x-icon" href="images/ICO/producao.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Portal de Simuladores</h1>
-    <p>Simulações e automações inteligentes para logística e operações.</p>
-  </header>
+    <!-- Foto no canto esquerdo fixo com link -->
+    <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor" class="author-top">
+    </a>
 
-  <!-- Seção de Simuladores -->
-  <section id="simuladores" class="apps-section">
-    <div class="card-base">
-      <img src="imagens/simulador1.png" alt="Simulador 2D/3D">
-      <h3>Simulador 2D/3D</h3>
-      <p>Visualize operações em 2D e 3D com dados ilustrativos baseados em números reais.</p>
-      <a href="#">Abrir</a>
+    <!-- Botão Menu no canto direito -->
+    <div class="menu-icon" id="menuButton">☰</div>
+
+    <!-- Menu Suspenso -->
+    <div class="menu-dropdown" id="menuDropdown">
+        <a href="#" id="sobreBtn">ℹ️ Sobre os Simuladores</a>
+        <a href="arquivos/exemplo_2D_3D.xlsx" download>📁 Baixar Exemplo 2D/3D</a>
+        <a href="arquivos/exemplo_separacao.xlsx" download>📁 Baixar Exemplo Separação</a>
+        <a href="arquivos/exemplo_binsmart-0179.xlsx" download>📁 Baixar Exemplo BinSmart-0179</a>
+        <a href="arquivos/exemplo_binmatch-1235.xlsx" download>📁 Baixar Exemplo BinMatch-1235</a>
+        <a href="#" id="contatoBtn">📞 Contato</a>
     </div>
 
-    <div class="card-base">
-      <img src="imagens/simulador2.png" alt="Simulador de Separação">
-      <h3>Simulador de Separação</h3>
-      <p>Analise gargalos e performance no processo de separação de produtos.</p>
-      <a href="#">Abrir</a>
+    <div class="hero">
+        <h1>Bem-vindo aos Meus Simuladores</h1>
+        <p>Simulações e automações inteligentes para operações logísticas</p>
+        <p>Escolha uma das opções abaixo</p>
     </div>
 
-    <div class="card-base">
-      <img src="imagens/simulador3.png" alt="BinSmart">
-      <h3>BinSmart - 0179</h3>
-      <p>Calcule bins necessários com base em demanda, posições e tipos de bin cadastrados.</p>
-      <a href="#">Abrir</a>
+    <section class="apps">
+        <div class="app-card">
+            <img src="images/IMG/tamanho.png" alt="Simulador 2D">
+            <h3>Simulador de Caixas 2D</h3>
+            <p>Monte caixas otimizadas em 2D.</p>
+            <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank">Abrir App</a>
+        </div>
+
+        <div class="app-card">
+            <img src="images/IMG/dimensao.png" alt="Simulador 3D">
+            <h3>Simulador de Caixas 3D</h3>
+            <p>Empacotamento otimizado em 3D.</p>
+            <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank">Abrir App</a>
+        </div>
+
+        <div class="app-card">
+            <img src="images/IMG/pacotes.png" alt="Simulador de Separação">
+            <h3>Simulador de Separação</h3>
+            <p>Simule o tempo e eficiência da separação.</p>
+            <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
+        </div>
+
+        <div class="app-card-bin">
+            <img src="images/IMG/CP-6423-01.png" alt="BinMatch - Necessidade vs. Capacidade">
+            <h3>BinMatch - 1235</h3>
+            <p>Calcule bins por posição e otimize o picking.</p>
+            <a href="https://binmatch-1235.streamlit.app/" target="_blank">Abrir App</a>  
+        </div>
+
+        <div class="app-card-bin">
+            <img src="images/IMG/bin-9-2-removebg-preview.png" alt="BinSmart - Necessidade vs. Capacidade">
+            <h3>BinSmart - 0179</h3>
+            <p>Calcule bins por posição e otimize o picking.</p>
+            <a href="https://binsmart-0179.streamlit.app/" target="_blank">Abrir App</a>  
+        </div>
+
+    </section>
+
+    <!-- Popup Informativo Sobre -->
+    <div class="popup" id="sobrePopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2>ℹ️ Portal de Simuladores Operacionais</h2>
+            
+            <p>👋 Seja bem-vindo(a) ao portal de <strong>Simuladores Operacionais</strong>, um conjunto de ferramentas inteligentes focadas em otimizar processos logísticos e produtivos!</p>
+            
+            <h3>🚀 Funcionalidades Disponíveis:</h3>
+            
+            <ul>
+                <li> <img src="images/IMG/tamanho.png" style="width: 24px; vertical-align: baseline;"> <strong>Simulador de Caixas 2D:</strong><br>
+                Simula a montagem de caixas de forma otimizada, considerando apenas <em>largura</em> e <em>profundidade</em>. Ideal para situações onde a altura dos produtos não influencia no empacotamento.</li>
+                
+                <li> <img src="images/IMG/dimensao.png" style="width: 24px; vertical-align: baseline;"> <strong>Simulador de Caixas 3D:</strong><br>
+                Realiza empacotamento tridimensional, levando em conta <em>largura, profundidade e altura</em>. Essencial para simular carregamentos completos, transporte ou armazenamento.</li>
+                
+                <li> <img src="images/IMG/pacotes.png" style="width: 24px; vertical-align: baseline;"> <strong>Simulador de Separação:</strong><br>
+                Calcula o tempo e eficiência do processo de separação de produtos em esteiras, considerando estações, capacidade de caixas por estação e ritmo de separação. Ajuda a detectar gargalos e planejar melhor o fluxo.</li>
+            
+                <li> <img src="images/IMG/CP-6423-01.png" style="width: 24px; vertical-align: baseline;"> <strong>Simulador de Bins - Necessidade vs. Capacidade</strong><br>
+                O Simulador de Bins de Picking é uma ferramenta desenvolvida para calcular automaticamente a quantidade necessária de bins (caixas de abastecimento) para armazenar os produtos em posições de picking no armazém. 
+                Com base em informações de produtos, volumes e posições cadastradas no banco de dados, o simulador realiza as seguintes operações:
+                    <h4>✔️ Calcula o número de bins necessários por produto e posição, respeitando os volumes máximos permitidos por cada tipo de bin.</h4>
+
+                    <h4>✔️ Compara a quantidade de bins necessárias com a quantidade disponível em cada posição do picking.</p>
+
+                    <h4>✔️ Gera relatórios detalhados por produto, posição e estrutura, indicando:</h4>
+
+                        <p>Se a posição atende ou não à demanda de bins.</p>
+
+                        <p>Quantidade total de itens e volume movimentado.</p>
+
+                        <p></p>Capacidade máxima de volumetria das bins disponíveis.</p>
+
+                    <h4>✔️ Apresenta resumos por estrutura, facilitando a visualização rápida de:</h4>
+
+                        <p>Posições que não atendem à demanda (falta de bins).</p>
+
+                        <p>Posições que atendem à demanda (bins suficientes).</p>
+
+                    <h4>✔️ Permite ajustes manuais nas quantidades de bins, caso necessário, para atender a demandas específicas.</h4>            
+                </li>
+            
+            </ul>
+
+            <h3>📁 Arquivos de Exemplo:</h3>
+            <p>Para facilitar o uso dos simuladores, disponibilizamos arquivos prontos para teste:</p>
+            
+            <ul>
+                <li>🗂️ <strong>Exemplo 2D / 3D:</strong> Layout com colunas padrão de produto, dimensões e loja. Ideal para testar os simuladores de caixas.</li>
+                <li>🗂️ <strong>Exemplo Separação:</strong> Estrutura simulada de separação em esteira, com produtos, quantidades e estações configuradas.</li>
+                <li>🗂️ <strong>Exemplo Bins:</strong> Arquivo com demanda de produtos e posições de picking, pronto para validar a necessidade de bins em relação à capacidade cadastrada.</li>
+            </ul>
+
+            <h3>💡 Recomendações:</h3>
+            <ul>
+                <li>⚠️ Respeite o formato dos arquivos de exemplo. Campos obrigatórios e estrutura devem ser mantidos para simulação correta.</li>
+                <li>📊 Simuladores otimizados para cenários logísticos comuns, porém podem ser ajustados conforme necessidade específica.</li>
+                <li>🔄 Atualizações e melhorias contínuas. Sempre que possível, consulte a última versão do portal.</li>
+            </ul>
+
+            <h3>📲 Dúvidas ou Sugestões:</h3>
+            <p>Você pode entrar em contato diretamente através do botão <strong>Contato</strong> no menu ou pelos links ao final da página.</p>
+
+            <p>🤝 Conte comigo para evoluir seus processos logísticos e operacionais!</p>
+        </div>
     </div>
 
-    <div class="card-base">
-      <img src="imagens/simulador4.png" alt="BinMatch">
-      <h3>BinMatch - 1235</h3>
-      <p>Compare posições atuais vs necessárias, otimizando uso de bins no picking.</p>
-      <a href="#">Abrir</a>
+    <!-- Fundo Escuro para Popups -->
+    <div class="popup-bg" id="popupBg"></div>
+
+    <!-- Popup de Contato -->
+    <div class="popup" id="contatoPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeContatoPopup">&times;</span>
+            <h2>📞 Contato</h2>
+            <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
+            <p>Entre em contato para projetos personalizados</p>
+            <ul>
+                <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com">📧</a></li>
+                <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Oliveira</a></li>
+            </ul>
+            <p>Estou sempre aberto a sugestões e melhorias. Sua opinião é muito importante!</p>
+        </div>
     </div>
-  </section>
 
-  <!-- Popups -->
-  <div id="sobrePopup" class="popup">
-    <div class="popup-content">
-      <span class="close" id="closePopup">&times;</span>
-      <h2>Sobre os Simuladores</h2>
-      <p>
-        Este portal reúne simuladores e automações voltados para logística.  
-        Os dados exibidos são ilustrativos, mas baseados em números reais de operações.  
-        Novos simuladores serão adicionados futuramente, assim como planos de assinatura com mais recursos.
-      </p>
+    <!-- Ajuda Popup -->
+    <div class="help-popup-bg" id="helpPopupBg"></div>
+    <div class="help-popup" id="helpPopup">
+        <div class="popup-content">
+            <h2>Como Usar os Simuladores</h2>
+            <ol>
+                <li>Escolha o simulador desejado abaixo.</li>
+                <li>Clique em "Abrir App" para acessar.</li>
+                <li>Faça upload dos arquivos conforme instruções dos simuladores.</li>
+            </ol>
+            <button id="closeHelpPopup" class="btn btn-close">Fechar</button>
+        </div>
     </div>
-  </div>
 
-  <div id="contatoPopup" class="popup">
-    <div class="popup-content">
-      <span class="close" id="closeContato">&times;</span>
-      <h2>Contato</h2>
-      <p>✉️ Email: <a href="mailto:andy.oliveiraf@gmail.com">andy.oliveiraf@gmail.com</a></p>
-      <p>💻 GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a></p>
-      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/anderson-oliveira" target="_blank">Ânderson Oliveira</a></p>
-    </div>
-  </div>
+    <!-- Botões Flutuantes -->
+    <button id="scrollToTop" title="Voltar ao Topo">🔝</button>
+    <button id="helpButton" class="help-btn" title="Ajuda">❔</button>
 
-  <div id="ajudaPopup" class="popup">
-    <div class="popup-content">
-      <span class="close" id="closeAjuda">&times;</span>
-      <h2>Ajuda</h2>
-      <p>Use os simuladores para explorar soluções logísticas.  
-         Para dúvidas, entre em contato pelo email ou LinkedIn.</p>
-    </div>
-  </div>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
+        <p class="author-name">Ânderson Oliveira</p>
+        <p>Engenheiro de Dados | Soluções Logísticas | Automações</p>
+        <div>
+            <a href="https://github.com/MySpaceCrazy" target="_blank">
+                <img src="images/IMG/github.png" alt="GitHub" style="width: 32px;">
+            </a>
+            <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
+                <img src="images/IMG/linkedin.png" alt="LinkedIn" style="width: 32px;">
+            </a>
+        </div>
+        <p class="footer-text">© 2025 Ânderson Oliveira. Todos os direitos reservados.</p>
+    </footer>
 
-  <!-- Botões fixos -->
-  <button id="sobreBtn" class="floating-btn">ℹ️ Sobre</button>
-  <button id="contatoBtn" class="floating-btn">📧 Contato</button>
-  <button id="ajudaBtn" class="floating-btn">❓ Ajuda</button>
-  <button id="scrollToTop" class="scroll-top">⬆️</button>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
