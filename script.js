@@ -81,7 +81,7 @@ if (contatoBtn) {
 }
 
 // Cards animação e clique
-document.querySelectorAll('.app-card').forEach(card => {
+document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
   card.style.cursor = 'pointer';
 
   card.addEventListener('mouseover', () => {
@@ -194,7 +194,7 @@ if (menuDropdown) {
 }
 
 // Animações hover para os cards dos apps
-document.querySelectorAll('.app-card').forEach(card => {
+document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
   card.addEventListener('mouseover', () => {
     card.style.transform = 'translateY(-10px) scale(1.05)';
   });
@@ -204,10 +204,17 @@ document.querySelectorAll('.app-card').forEach(card => {
 });
 
 // Evento clique nos cards para alertar nome do app
-document.querySelectorAll('.app-card').forEach(card => {
+/*document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
   card.addEventListener('click', () => {
     const appName = card.querySelector('h3').textContent;
     alert(`Você clicou no card do ${appName}`);
+  });
+});*/
+
+document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
+  card.addEventListener('click', () => {
+    const link = card.querySelector('a').href;
+    window.open(link, '_blank');
   });
 });
 

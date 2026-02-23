@@ -328,6 +328,17 @@ footer .author-name, .footer .author-name {
 .help-btn:hover { background-color: #f80505; transform: translateY(-3px); }
 .help-btn:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
+/* No seu style.css */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Animações */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
