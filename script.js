@@ -311,3 +311,43 @@ window.addEventListener('load', () => {
     }
   }, 2000); // 3s de delay antes de começar
 });
+
+// Configuração das Partículas (Fundo Animado)
+tsParticles.load("tsparticles", {
+    particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#00d4ff" }, // Cor azul neon
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: false },
+        size: { value: 3, random: true },
+        links: {
+            enable: true,
+            distance: 150,
+            color: "#00d4ff",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: { default: "bounce" },
+        }
+    },
+    interactivity: {
+        detectsOn: "canvas",
+        events: {
+            onHover: { enable: true, mode: "grab" }, // Puxa as linhas pro mouse
+            resize: true
+        },
+        modes: { grab: { distance: 200, links: { opacity: 0.8 } } }
+    },
+    retina_detect: true
+});
+// Atualizar o ano do rodapé automaticamente
+const anoAtualSpan = document.getElementById('anoAtual');
+if (anoAtualSpan) {
+    anoAtualSpan.textContent = new Date().getFullYear();
+}

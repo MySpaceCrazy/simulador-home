@@ -1,10 +1,12 @@
-/** style.css - Portal de Simuladores (versão otimizada) **/
+/** style.css - Portal de Simuladores (versão otimizada com Glassmorphism e Fundo Animado) **/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #340106, #2f0000);
+    /* Colocamos a imagem futurista no corpo inteiro, fixa! */
+    background: url('images/projeto-futurista-fundo/3607424.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     overflow-x: hidden;
 }
@@ -15,16 +17,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/projeto-futurista-fundo/3607424.jpg') no-repeat center center;
-    background-size: cover;
     flex-direction: column;
     animation: fadeIn 2s ease-in-out;
     text-align: center;
+    position: relative;
+    z-index: 1; /* Garante que os textos fiquem acima das partículas */
 }
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
 .hero p { font-size: 1.2rem; }
 
-/* Cards */
+/* Cards Container */
 .apps {
     display: flex;
     flex-wrap: wrap;
@@ -33,68 +35,70 @@ body {
     padding: 60px 20px;
 }
 
-.app-card {
-    background: white;
-    color: #333;
+/* Cards com Efeito Vidro (Glassmorphism) unificados */
+.app-card, .app-card-bin {
+    background: rgba(20, 20, 30, 0.6); /* Fundo escuro translúcido */
+    backdrop-filter: blur(12px); /* Efeito de vidro embaçado */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    color: #f0f2f6;
     border-radius: 16px;
     padding: 20px;
     width: 280px;
     text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 340px;
+    z-index: 1; /* Fica acima das partículas */
 }
 
+/* Tamanhos específicos de imagem mantidos da sua versão original */
 .app-card img { width: 100px; margin: 0 auto 15px auto; }
-.app-card:hover { transform: translateY(-10px); }
-.app-card h3 { margin-top: 10px; font-size: 1.2rem; min-height: 50px; }
-.app-card p { font-size: 1rem; min-height: 50px; }
-.app-card a {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s;
-    align-self: center;
-}
-.app-card a:hover { background-color: #0056b3; }
-
-.app-card-bin {
-    background: white;
-    color: #333;
-    border-radius: 16px;
-    padding: 20px;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 340px;
-}
 .app-card-bin img { width: 120px; margin: 0 auto 15px auto; }
-.app-card-bin:hover { transform: translateY(-10px); }
-.app-card-bin h3 { margin-top: 10px; font-size: 1.2rem; min-height: 50px; }
-.app-card-bin p { font-size: 1rem; min-height: 50px; }
-.app-card-bin a {
+
+/* Efeito Glow ao passar o mouse */
+.app-card:hover, .app-card-bin:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 40px rgba(0, 212, 255, 0.3); /* Brilho azul neon */
+    border: 1px solid rgba(0, 212, 255, 0.4);
+}
+
+.app-card h3, .app-card-bin h3 { 
+    margin-top: 10px; 
+    font-size: 1.2rem; 
+    min-height: 50px; 
+    color: #ffffff;
+}
+
+.app-card p, .app-card-bin p { 
+    font-size: 1rem; 
+    min-height: 50px; 
+}
+
+/* Botões Modernos com Gradiente */
+.app-card a, .app-card-bin a, .popup-content .btn {
     display: inline-block;
     margin-top: 12px;
-    padding: 8px 16px;
-    background-color: #007bff;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00d4ff, #0056b3); /* Gradiente azul */
     color: white;
-    border-radius: 8px;
+    border-radius: 30px; /* Bordas mais arredondadas (Pill shape) */
     text-decoration: none;
-    transition: background 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
     align-self: center;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
 }
-.app-card-bin a:hover { background-color: #0056b3; }
+
+.app-card a:hover, .app-card-bin a:hover, .popup-content .btn:hover { 
+    background: linear-gradient(135deg, #00e5ff, #007bff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+}
 
 /* Sobre */
 .about {
@@ -150,19 +154,30 @@ body {
 
 .about a:hover { color: #0056b3; text-decoration: underline; }
 
-
-/* Rodapé */
+/* Rodapé Modernizado e Sem Linhas de Corte */
 footer, .footer {
-    margin-top: 50px;
-    padding: 40px 20px;
+    margin-top: 20px;
+    padding: 40px 20px 20px 20px;
     text-align: center;
-    background-color: #000;
+    
+    /* Removemos o gradiente preto e a borda, e colocamos o efeito vidro (Glassmorphism) */
+    background: rgba(15, 15, 20, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: none; /* Isso garante que não haverá nenhuma linha riscando a tela */
+    
     color: white;
+    position: relative;
+    z-index: 1;
 }
-footer img, .footer img {
-    width: 120px;
+
+footer img:not([alt="GitHub"]):not([alt="LinkedI"]):not([alt="PowerBI"]), 
+.footer img:not([alt="GitHub"]):not([alt="LinkedI"]):not([alt="PowerBI"]) {
+    width: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(0, 212, 255, 0.5); /* Borda neon na sua foto */
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
 .footer div a {
@@ -181,116 +196,173 @@ footer .author-name, .footer .author-name {
 .footer-text a { color: #007bff; text-decoration: none; }
 .footer-text a:hover { text-decoration: underline; }
 
+.footer div {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento padrão entre os ícones */
+    margin: 20px 0;
+}
+
+.footer div a img {
+    width: 35px !important;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(30%); /* Ícones um pouco mais sóbrios */
+    border: none; /* Garante que os ícones não peguem a borda da foto */
+    box-shadow: none;
+}
+
+.footer div a:hover img {
+    transform: translateY(-5px);
+    filter: grayscale(0%) drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+}
+
 /* Autor / Menu */
 .author-top, .author-top img {
     border-radius: 50%;
     transition: transform 0.3s;
 }
+/* Autor Top (Agora com Neon) */
 .author-top {
     position: fixed;
     top: 20px;
     left: 20px;
     width: 60px;
     height: 60px;
-    border: 2px solid white;
+    border: 2px solid rgba(0, 212, 255, 0.8); /* Borda Neon */
     object-fit: cover;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); /* Brilho em volta */
     z-index: 999;
     background-color: black;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
-.author-top:hover, .author-top img:hover { transform: scale(1.05); }
+.author-top:hover { 
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.8); /* Brilho aumenta no hover */
+}
 
 .menu-icon {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     z-index: 1000;
     color: white;
-    background: black;
-    border: 2px solid white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    transition: background 0.3s;
+    /* Fundo vidro translúcido */
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
 }
-.menu-icon:hover { background: rgba(255, 255, 255, 0.1); }
-.menu-icon:active { background: rgba(255, 255, 255, 0.2); }
+.menu-icon:hover { 
+    background: rgba(0, 212, 255, 0.1); 
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.6);
+    transform: scale(1.05);
+}
 
 .menu-dropdown {
     position: fixed;
-    top: 65px;
+    top: 75px;
     right: 20px;
-    background: #000;
-    border-radius: 10px;
-    padding: 10px;
+    background: rgba(15, 15, 20, 0.85); /* Efeito vidro */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 16px;
+    padding: 10px 0;
     display: none;
     flex-direction: column;
-    min-width: 220px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-width: 250px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
     z-index: 999;
+    overflow: hidden;
 }
 .menu-dropdown.show { display: flex; }
 .menu-dropdown a {
-    color: white;
-    padding: 8px 12px;
+    color: #f0f2f6;
+    padding: 12px 20px;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
 }
-.menu-dropdown a:hover { background: #222; }
-
-/* Popups Gerais */
+.menu-dropdown a:hover { 
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.15), transparent);
+    color: #00d4ff;
+    padding-left: 25px; /* Animação suave empurrando o texto */
+}
+/* Ícones do Menu Dropdown */
+.menu-dropdown a i {
+    width: 25px;
+    text-align: center;
+    color: #00d4ff; /* Cor azul neon nos ícones */
+    margin-right: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.menu-dropdown a:hover i {
+    color: white;
+    text-shadow: 0 0 10px #00d4ff;
+}
+/* Popups Gerais - Fundo e Ocultação Padrão */
 .popup, .help-popup {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
-    display: none;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro atrás do vidro */
+    backdrop-filter: blur(5px); /* Desfoque do resto do site quando o popup abre */
+    display: none; /* <-- ISSO AQUI ESCONDE ELES INICIALMENTE */
     justify-content: center;
     align-items: center;
     z-index: 1001;
 }
+
+.popup-bg, .help-popup-bg {
+    display: none;
+}
 .popup-content, .help-popup .popup-content {
-    background: #000;
+    background: rgba(20, 20, 30, 0.85); /* Fundo vidro */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
     color: white;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 1200px;
-    max-height: 80%;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1000px; /* Mais contido e elegante */
+    max-height: 80vh;
     overflow-y: auto;
     text-align: left;
     position: relative;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    line-height: 1.5;
-    width: 100%; /* Garante que o conteúdo não estique além do necessário */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 212, 255, 0.15);
+    line-height: 1.6;
+    width: 100%; 
     box-sizing: border-box;
 }
-.popup-content h2 { margin-top: 0; }
-.popup-content p { margin: 10px 0; }
-.popup-content a, .popup-content li a {
-    color: #007bff;
-    text-decoration: none;
+
+/* Isso vai sobrescrever automaticamente os estilos "duros" inline que estão no seu HTML do popup Sobre */
+.popup-content div[style*="background-color: #0e1117"] {
+    background: rgba(30, 30, 45, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 16px !important;
 }
-.popup-content a:hover, .popup-content li a:hover { text-decoration: underline; }
-.popup-content img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
-.popup-content ul { list-style-type: disc; padding-left: 20px; }
-.popup-content li { margin-bottom: 10px; }
-.popup-content .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s;
+
+.popup-content h2 { 
+    margin-top: 0; 
+    color: #00d4ff !important; /* Títulos em Neon */
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
-.popup-content .btn:hover { background-color: #0056b3; }
-.popup-content .btn-close { background-color: #dc3545; }
-.popup-content .btn-close:hover { background-color: #c82333; }
+
+.popup-content h3 { color: #f0f2f6; }
+.popup-content a { color: #00d4ff; text-decoration: none; font-weight: 600;}
+.popup-content a:hover { color: #00e5ff; text-shadow: 0 0 8px rgba(0, 212, 255, 0.5); }
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -299,29 +371,46 @@ footer .author-name, .footer .author-name {
     font-size: 1.5rem;
 }
 
-/* Botões flutuantes */
+/* Botões flutuantes de Vidro */
 #scrollToTop, .help-btn {
     position: fixed;
     z-index: 1000;
-    border: none;
+    border: 1px solid rgba(0, 212, 255, 0.4); /* Borda neon sutil */
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00d4ff;
+    background: rgba(20, 20, 30, 0.6); /* Vidro translúcido */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
-/* Botão Voltar ao Topo */
 #scrollToTop {
     bottom: 20px;
     right: 20px;
-    padding: 12px 16px;
-    background-color: #ffffff;
     display: none;
 }
-#scrollToTop.show { display: block; }
-#scrollToTop:hover { background-color: #e4f129; transform: translateY(-3px); }
-#scrollToTop:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+#scrollToTop.show { display: flex; }
+
+.help-btn {
+    bottom: 80px;
+    right: 20px;
+}
+
+/* Hover mágico: Eles viram botões sólidos brilhantes */
+#scrollToTop:hover, .help-btn:hover { 
+    background: linear-gradient(135deg, #00d4ff, #0056b3);
+    color: white;
+    transform: translateY(-5px) scale(1.1); 
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+    border-color: transparent;
+}
 
 /* Botão Ajuda acima do Voltar ao Topo */
 .help-btn {
@@ -333,7 +422,7 @@ footer .author-name, .footer .author-name {
 .help-btn:hover { background-color: #f80505; transform: translateY(-3px); }
 .help-btn:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
-/* No seu style.css */
+/* Classes utilitárias para o Javascript */
 .hidden {
     opacity: 0;
     transform: translateY(30px);

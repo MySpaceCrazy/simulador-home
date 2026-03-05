@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simuladores Operacionais</title>
-    <link rel="icon" type="image/x-icon" href="images/ICO/producao.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="images/ICO/producao.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      id="tsparticles"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      "
+    ></div>
 
     <!-- Foto no canto esquerdo fixo com link -->
-    <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor" class="author-top">
+    <a
+      href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4"
+      target="_blank"
+    >
+      <img
+        src="https://avatars.githubusercontent.com/u/90271653?v=4"
+        alt="Autor"
+        class="author-top"
+      />
     </a>
 
     <!-- Botão Menu no canto direito -->
@@ -20,236 +45,679 @@
 
     <!-- Menu Suspenso -->
     <div class="menu-dropdown" id="menuDropdown">
-        <a href="#" id="sobreBtn">ℹ️ Sobre os Simuladores</a>
-        <a href="arquivos/exemplo_2D_3D.xlsx" download>📁 Baixar Ex. 2D/3D</a>
-        <a href="arquivos/exemplo_separacao.xlsx" download>📁 Baixar Ex. Separação</a>
-        <a href="arquivos/exemplo_binsmart-0179.xlsx" download>📁 Baixar Ex. BinSmart-0179</a>
-        <a href="arquivos/exemplo_binmatch-1235.xlsx" download>📁 Baixar Ex. BinMatch-1235</a>
-        <a href="arquivos/exemplo_simulacao_paletizacao.xlsx" download>📁 Baixar Ex. Paletização 3D</a>
-        <a href="arquivos/exemplo_estoque_3D.zip" download>📁 Baixar Ex. Estoque 3D (Admin e Operador)</a>
-        <a href="#" id="contatoBtn">📞 Contato</a>
-        <a href="https://sites.google.com/view/dashcosultandersonoliveira/in%C3%ADcio" > 
-            <img src="images/IMG/icons8-power-bi.png" alt="PowerBI" style="width: 16px;"> Portfólio Projetos Power BI
-        </a>
+      <a href="#" id="sobreBtn"
+        ><i class="fa-solid fa-circle-info"></i> Sobre os Simuladores</a
+      >
+      <a href="arquivos/exemplo_2D_3D.xlsx" download
+        ><i class="fa-solid fa-file-excel"></i> Baixar Ex. 2D/3D</a
+      >
+      <a href="arquivos/exemplo_separacao.xlsx" download
+        ><i class="fa-solid fa-file-excel"></i> Baixar Ex. Separação</a
+      >
+      <a href="arquivos/exemplo_binsmart-0179.xlsx" download
+        ><i class="fa-solid fa-file-excel"></i> Baixar Ex. BinSmart-0179</a
+      >
+      <a href="arquivos/exemplo_binmatch-1235.xlsx" download
+        ><i class="fa-solid fa-file-excel"></i> Baixar Ex. BinMatch-1235</a
+      >
+      <a href="arquivos/exemplo_simulacao_paletizacao.xlsx" download
+        ><i class="fa-solid fa-file-excel"></i> Baixar Ex. Paletização 3D</a
+      >
+      <a href="arquivos/exemplo_estoque_3D.zip" download
+        ><i class="fa-solid fa-file-zipper"></i> Baixar Ex. Estoque 3D
+        (Admin/Op)</a
+      >
+      <a href="#" id="contatoBtn"
+        ><i class="fa-solid fa-envelope"></i> Contato</a
+      >
+      <a
+        href="https://sites.google.com/view/dashcosultandersonoliveira/in%C3%ADcio"
+        target="_blank"
+      >
+        <i class="fa-solid fa-chart-pie"></i> Portfólio Projetos Power BI
+      </a>
     </div>
 
     <div class="hero">
-        <h1>Bem-vindo aos Meus Simuladores</h1>
-        <p><strong>Simulações e automações inteligentes para operações logísticas</strong></p>
-        <p>Escolha uma das opções abaixo</p>
+      <h1>Bem-vindo aos Meus Simuladores</h1>
+      <p>
+        <strong
+          >Simulações e automações inteligentes para operações
+          logísticas</strong
+        >
+      </p>
+      <p>Escolha uma das opções abaixo</p>
     </div>
 
     <section class="apps">
-        <div class="app-card">
-            <img src="images/IMG/tamanho.png" alt="Simulador 2D">
-            <h3>Simulador de Caixas 2D</h3>
-            <p>Monte caixas otimizadas em 2D.</p>
-            <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank">Abrir App</a>
-        </div>
+      <div class="app-card">
+        <img src="images/IMG/tamanho.png" alt="Simulador 2D" />
+        <h3>Simulador de Caixas 2D</h3>
+        <p>Monte caixas otimizadas em 2D.</p>
+        <a href="https://simuladorcaixas2d.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card">
-            <img src="images/IMG/dimensao.png" alt="Simulador 3D">
-            <h3>Simulador de Caixas 3D</h3>
-            <p>Empacotamento otimizado em 3D.</p>
-            <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank">Abrir App</a>
-        </div>
+      <div class="app-card">
+        <img src="images/IMG/dimensao.png" alt="Simulador 3D" />
+        <h3>Simulador de Caixas 3D</h3>
+        <p>Empacotamento otimizado em 3D.</p>
+        <a href="https://simuladorcaixas3d.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card">
-            <img src="images/IMG/pacotes.png" alt="Simulador de Separação">
-            <h3>Simulador de Separação</h3>
-            <p>Simule o tempo e eficiência da separação.</p>
-            <a href="https://simuladorparting-line.streamlit.app/" target="_blank">Abrir App</a>
-        </div>
+      <div class="app-card">
+        <img src="images/IMG/pacotes.png" alt="Simulador de Separação" />
+        <h3>Simulador de Separação</h3>
+        <p>Simule o tempo e eficiência da separação.</p>
+        <a href="https://simuladorparting-line.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card-bin">
-            <img src="images/IMG/CP-6423-01.png" alt="BinMatch - Necessidade vs. Capacidade">
-            <h3>BinMatch - 1235</h3>
-            <p>Calcule bins por posição e otimize o picking.</p>
-            <a href="https://binmatch-1235.streamlit.app/" target="_blank">Abrir App</a>  
-        </div>
+      <div class="app-card-bin">
+        <img
+          src="images/IMG/CP-6423-01.png"
+          alt="BinMatch - Necessidade vs. Capacidade"
+        />
+        <h3>BinMatch - 1235</h3>
+        <p>Calcule bins por posição e otimize o picking.</p>
+        <a href="https://binmatch-1235.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card-bin">
-            <img src="images/IMG/bin-9-2-removebg-preview.png" alt="BinSmart - Necessidade vs. Capacidade">
-            <h3>BinSmart - 0179</h3>
-            <p>Calcule bins por posição e otimize o picking.</p>
-            <a href="https://binsmart-0179.streamlit.app/" target="_blank">Abrir App</a>  
-        </div>
+      <div class="app-card-bin">
+        <img
+          src="images/IMG/bin-9-2-removebg-preview.png"
+          alt="BinSmart - Necessidade vs. Capacidade"
+        />
+        <h3>BinSmart - 0179</h3>
+        <p>Calcule bins por posição e otimize o picking.</p>
+        <a href="https://binsmart-0179.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card-bin">
-            <img src="images/IMG/pallete.png" alt="Paletização 3D - Cubagem e Paletização">
-            <h3>Simulador de Paletização 3D</h3>
-            <p>Simule a paletização de produtos em 3D.</p>
-            <a href="https://simualdor-pallet3d.streamlit.app/" target="_blank">Abrir App</a>  
-        </div>
+      <div class="app-card-bin">
+        <img
+          src="images/IMG/pallete.png"
+          alt="Paletização 3D - Cubagem e Paletização"
+        />
+        <h3>Simulador de Paletização 3D</h3>
+        <p>Simule a paletização de produtos em 3D.</p>
+        <a href="https://simualdor-pallet3d.streamlit.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
 
-        <div class="app-card">
-            <img src="images/IMG/porta-palete.png" alt="Simulador de Estoque 3D"> <h3>Simulador de Estoque 3D</h3>
-            <p>Visualização 3D interativa de armazéns e portas-palete.</p>
-            <a href="https://simulador-estoque-3d.vercel.app/" target="_blank">Abrir App</a>
-        </div>
-
+      <div class="app-card">
+        <img src="images/IMG/porta-palete.png" alt="Simulador de Estoque 3D" />
+        <h3>Simulador de Estoque 3D</h3>
+        <p>Visualização 3D interativa de armazéns e portas-palete.</p>
+        <a href="https://simulador-estoque-3d.vercel.app/" target="_blank"
+          >Abrir App</a
+        >
+      </div>
     </section>
 
     <!-- Popup Informativo Sobre -->
     <div class="popup" id="sobrePopup">
-        <div class="popup-content">
-            <span class="close-btn" id="closePopup">&times;</span>
-            <h2 style="text-align: center; color: #ff4b4b; margin-bottom: 20px;">ℹ️ Portal de Simuladores Operacionais</h2>
-            
-            <p>👋 Seja bem-vindo(a) ao portal de <strong>Simuladores Operacionais</strong>, um conjunto de ferramentas inteligentes focadas em otimizar processos logísticos e produtivos!</p>
-            
-            <h3 style="margin-top: 30px; border-left: 4px solid #00d4ff; padding-left: 15px;">🚀 Funcionalidades Disponíveis:</h3>
-            
-            <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
-                
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/tamanho.png" style="width: 32px; vertical-align: baseline;"> 
-                        Simulador de Caixas 2D: Otimização Plana
-                    </h2>
-                    <p style="font-size: 1.1em;">Ferramenta focada no cálculo de arranjo em superfícies, ideal para planejar o posicionamento de itens onde a profundidade e a largura são os fatores determinantes.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ Destaques da Simulação:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 12px;"><strong>Foco em Área Útil:</strong> Simula a montagem considerando apenas largura e profundidade, otimizando a ocupação do plano.</li>
-                            <li style="margin-bottom: 12px;"><strong>Otimização de Layout:</strong> Encontra a melhor distribuição de itens para evitar desperdício de bordas e espaços vazios.</li>
-                            <li style="margin-bottom: 12px;"><strong>Agilidade no Empacotamento:</strong> Ideal para cenários de embalagem onde a altura não influencia no agrupamento inicial.</li>
-                            <li style="margin-bottom: 12px;"><strong>Visualização Simplificada:</strong> Gera um mapa claro da disposição dos produtos na base escolhida.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Ideal para:</strong> Planejamento de envios em envelopes, caixas rasas, ou organização de bases de transporte sem empilhamento vertical.
-                    </div>
-                </div>
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <h2 style="text-align: center; color: #ff4b4b; margin-bottom: 20px">
+          ℹ️ Portal de Simuladores Operacionais
+        </h2>
 
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/dimensao.png" style="width: 32px; vertical-align: baseline;"> 
-                        Simulador de Caixas 3D: Cubagem Completa
-                    </h2>
-                    <p style="font-size: 1.1em;">Otimização tridimensional avançada para empacotamento, considerando largura, profundidade e altura para simular com precisão o aproveitamento total de carga.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ Capacidades do Simulador:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 12px;"><strong>Empacotamento Volumétrico:</strong> Calcula a disposição dos itens em todas as dimensões, maximizando o preenchimento de contêineres e caixas master.</li>
-                            <li style="margin-bottom: 12px;"><strong>Logística de Armazenamento:</strong> Essencial para prever a ocupação em prateleiras e vãos de estoque que exigem empilhamento vertical.</li>
-                            <li style="margin-bottom: 12px;"><strong>Simulação de Transporte:</strong> Planeje carregamentos completos de veículos, garantindo que o volume cubado esteja de acordo com a capacidade do transporte.</li>
-                            <li style="margin-bottom: 12px;"><strong>Visualização Espacial:</strong> Oferece uma perspectiva clara da organização interna dos produtos, facilitando a execução operacional.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Objetivo:</strong> Eliminar o "transporte de ar", reduzir custos de frete e garantir que o planejamento de armazenamento reflita a realidade física.
-                    </div>
-                </div>
+        <p>
+          👋 Seja bem-vindo(a) ao portal de
+          <strong>Simuladores Operacionais</strong>, um conjunto de ferramentas
+          inteligentes focadas em otimizar processos logísticos e produtivos!
+        </p>
 
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/pacotes.png" style="width: 32px; vertical-align: baseline;"> 
-                        Simulador de Separação: Fluxo e Produtividade
-                    </h2>
-                    <p style="font-size: 1.1em;">Ferramenta de análise de desempenho operacional voltada para esteiras e linhas de picking, focada em produtividade e equilíbrio de carga de trabalho.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ Análises do Simulador:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 12px;"><strong>Detecção de Gargalos:</strong> Identifica pontos de retenção no fluxo de caixas, permitindo ajustes no ritmo das estações de trabalho.</li>
-                            <li style="margin-bottom: 12px;"><strong>Eficiência por Estação:</strong> Calcula a capacidade real de processamento de cada ponto da esteira com base no tempo de separação.</li>
-                            <li style="margin-bottom: 12px;"><strong>Planejamento de Fluxo:</strong> Projeta o tempo total de operação de acordo com o volume de pedidos e a equipe disponível.</li>
-                            <li style="margin-bottom: 12px;"><strong>Otimização de Recursos:</strong> Ajuda a definir o número ideal de separadores por turno para manter a esteira em movimento constante.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Objetivo:</strong> Maximizar o output da operação, reduzir tempos ociosos e garantir um fluxo de saída de pacotes contínuo e equilibrado.
-                    </div>
-                </div>
+        <h3
+          style="
+            margin-top: 30px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 15px;
+          "
+        >
+          🚀 Funcionalidades Disponíveis:
+        </h3>
 
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/CP-6423-01.png" style="width: 32px; vertical-align: baseline;"> 
-                        Simulador de Bins: Necessidade vs. Capacidade
-                    </h2>
-                    <p style="font-size: 1.1em;">Ferramenta estratégica para cálculo automático de abastecimento, garantindo que as posições de picking suportem a volumetria demandada.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ Funcionalidades do Sistema:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 12px;"><strong>Cálculo de Necessidade:</strong> Determina o número de bins por produto, respeitando os limites volumétricos de cada modelo de caixa.</li>
-                            <li style="margin-bottom: 12px;"><strong>Análise de Capacidade:</strong> Compara em tempo real a demanda de armazenamento com o espaço disponível fisicamente na posição.</li>
-                            <li style="margin-bottom: 12px;"><strong>Relatórios Detalhados:</strong> Visão completa por produto e estrutura, indicando status de atendimento, volume movimentado e capacidade máxima.</li>
-                            <li style="margin-bottom: 12px;"><strong>Gestão de Estruturas:</strong> Resumos rápidos que identificam posições críticas (falta de bins) e posições otimizadas.</li>
-                            <li style="margin-bottom: 12px;"><strong>Flexibilidade Operacional:</strong> Permite ajustes manuais para demandas sazonais ou específicas.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Objetivo:</strong> Equilibrar o estoque de picking, evitar rupturas por falta de espaço e otimizar a densidade de armazenamento.
-                    </div>
-                </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+          "
+        >
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/tamanho.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Simulador de Caixas 2D: Otimização Plana
+            </h2>
+            <p style="font-size: 1.1em">
+              Ferramenta focada no cálculo de arranjo em superfícies, ideal para
+              planejar o posicionamento de itens onde a profundidade e a largura
+              são os fatores determinantes.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ Destaques da Simulação:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 12px">
+                  <strong>Foco em Área Útil:</strong> Simula a montagem
+                  considerando apenas largura e profundidade, otimizando a
+                  ocupação do plano.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Otimização de Layout:</strong> Encontra a melhor
+                  distribuição de itens para evitar desperdício de bordas e
+                  espaços vazios.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Agilidade no Empacotamento:</strong> Ideal para
+                  cenários de embalagem onde a altura não influencia no
+                  agrupamento inicial.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Visualização Simplificada:</strong> Gera um mapa claro
+                  da disposição dos produtos na base escolhida.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Ideal para:</strong> Planejamento de envios em
+              envelopes, caixas rasas, ou organização de bases de transporte sem
+              empilhamento vertical.
+            </div>
+          </div>
 
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/pallete.png" style="width: 32px; vertical-align: baseline;"> 
-                        Central de Inteligência em Paletização
-                    </h2>
-                    <p style="font-size: 1.1em;">Esta ferramenta foi desenvolvida para otimizar o planejamento logístico, garantindo o máximo aproveitamento de espaço e precisão no cálculo de armazenamento.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ O que o simulador oferece:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 8px;"><strong>Simulação Visual 3D:</strong> Visualize o pallet montado antes mesmo de ir para o estoque com teste de rotação automática.</li>
-                            <li style="margin-bottom: 8px;"><strong>Cálculo de Capacidade Real:</strong> Saiba quantas caixas e unidades cabem, respeitando o limite de altura do porta-pallet.</li>
-                            <li style="margin-bottom: 8px;"><strong>Processamento em Lote:</strong> Suba uma planilha Excel e processe centenas de produtos instantaneamente.</li>
-                            <li style="margin-bottom: 8px;"><strong>Aproveitamento de Volume:</strong> Indicador percentual de eficiência do espaço utilizado.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Objetivo:</strong> Reduzir erros de cubagem, otimizar o transporte e agilizar o cadastro de novos produtos no sistema.
-                    </div>
-                </div>
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/dimensao.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Simulador de Caixas 3D: Cubagem Completa
+            </h2>
+            <p style="font-size: 1.1em">
+              Otimização tridimensional avançada para empacotamento,
+              considerando largura, profundidade e altura para simular com
+              precisão o aproveitamento total de carga.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ Capacidades do Simulador:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 12px">
+                  <strong>Empacotamento Volumétrico:</strong> Calcula a
+                  disposição dos itens em todas as dimensões, maximizando o
+                  preenchimento de contêineres e caixas master.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Logística de Armazenamento:</strong> Essencial para
+                  prever a ocupação em prateleiras e vãos de estoque que exigem
+                  empilhamento vertical.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Simulação de Transporte:</strong> Planeje
+                  carregamentos completos de veículos, garantindo que o volume
+                  cubado esteja de acordo com a capacidade do transporte.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Visualização Espacial:</strong> Oferece uma
+                  perspectiva clara da organização interna dos produtos,
+                  facilitando a execução operacional.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Objetivo:</strong> Eliminar o "transporte de ar",
+              reduzir custos de frete e garantir que o planejamento de
+              armazenamento reflita a realidade física.
+            </div>
+          </div>
 
-                <div style="font-family: 'Segoe UI', Arial, sans-serif; color: #f0f2f6; background-color: #0e1117; padding: 20px; border-radius: 12px; border: 1px solid #30363d; line-height: 1.6;">
-                    <h2 style="color: #ff4b4b; margin-top: 0; display: flex; align-items: center; gap: 10px;">
-                        <img src="images/IMG/warehouse.png" style="width: 32px; vertical-align: baseline;"> 
-                        Simulador de Estoque 3D: Visão Gerencial
-                    </h2>
-                    <p style="font-size: 1.1em;">Interface avançada para gestão de armazéns, permitindo a visualização espacial de endereços e níveis de ocupação integrados a dados operacionais.</p>
-                    <div style="margin: 20px 0;">
-                        <h4 style="color: #00d4ff; margin-bottom: 10px;">✨ Destaques do Sistema:</h4>
-                        <ul style="padding-left: 20px;">
-                            <li style="margin-bottom: 12px;"><strong>Visualização 3D interativa:</strong> Interface intuitiva para navegar e explorar o armazém em tempo real.</li>
-                            <li style="margin-bottom: 12px;"><strong>Filtros Inteligentes:</strong> Processamento sob demanda para visualizar setores, famílias de produtos ou status de ocupação.</li>
-                            <li style="margin-bottom: 12px;"><strong>Navegação Espacial:</strong> Simulador 3D interativo que facilita a identificação de posições críticas e áreas de picking.</li>
-                            <li style="margin-bottom: 12px;"><strong>Dashboard Analítico:</strong> Gráficos e indicadores de performance gerados em paralelo à simulação visual.</li>
-                        </ul>
-                    </div>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #238636;">
-                        <strong>✅ Ideal para:</strong> Inventários cíclicos, planejamento de layout de armazém e auditorias rápidas de ocupação de porta-pallets.
-                    </div>
-                        <h4 style="color: #ecb213; margin-bottom: 10px;"> Importante:</h4>
-                    <div style="background-color: #23863622; padding: 12px; border-radius: 8px; border-left: 4px solid #f0d851;">
-                        <strong>⚠️ Como usar:</strong> Primeiro conecte-se como administrador do sistema para configurar os dados do armazém e depois como operador para visualizar os dados de ocupação.
-                    </div>
-                </div>
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/pacotes.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Simulador de Separação: Fluxo e Produtividade
+            </h2>
+            <p style="font-size: 1.1em">
+              Ferramenta de análise de desempenho operacional voltada para
+              esteiras e linhas de picking, focada em produtividade e equilíbrio
+              de carga de trabalho.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ Análises do Simulador:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 12px">
+                  <strong>Detecção de Gargalos:</strong> Identifica pontos de
+                  retenção no fluxo de caixas, permitindo ajustes no ritmo das
+                  estações de trabalho.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Eficiência por Estação:</strong> Calcula a capacidade
+                  real de processamento de cada ponto da esteira com base no
+                  tempo de separação.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Planejamento de Fluxo:</strong> Projeta o tempo total
+                  de operação de acordo com o volume de pedidos e a equipe
+                  disponível.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Otimização de Recursos:</strong> Ajuda a definir o
+                  número ideal de separadores por turno para manter a esteira em
+                  movimento constante.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Objetivo:</strong> Maximizar o output da operação,
+              reduzir tempos ociosos e garantir um fluxo de saída de pacotes
+              contínuo e equilibrado.
+            </div>
+          </div>
 
-            </div> <h3 style="margin-top: 40px; border-left: 4px solid #00d4ff; padding-left: 15px;">📁 Arquivos de Exemplo:</h3>
-            <p>Para facilitar o uso dos simuladores, disponibilizamos arquivos prontos para teste:</p>
-            <ul>
-                <li>🗂️ <strong>Exemplo 2D / 3D:</strong> Layout com colunas padrão de produto, dimensões e loja. Ideal para testar os simuladores de caixas.</li>
-                <li>🗂️ <strong>Exemplo Separação:</strong> Estrutura simulada de separação em esteira, com produtos, quantidades e estações configuradas.</li>
-                <li>🗂️ <strong>Exemplo Bins:</strong> Arquivo com demanda de produtos e posições de picking, pronto para validar a necessidade de bins em relação à capacidade cadastrada.</li>
-                <li>🗂️ <strong>Exemplo Paletização 3D:</strong> Arquivo com dados de cubagem das caixas de fornecedores dos skus utilizados em operações de paletização logísticas.</li>
-                <li>🗂️ <strong>Exemplo Estoque 3D administrador:</strong> Arquivo com dados de configuração do armazém, incluindo dimensões (altura máxima), estrutura de endereçamento (corredor, coluna, nível e posição).</li>
-                <li>🗂️ <strong>Exemplo Estoque 3D operador:</strong> Arquivo com dados de ocupação de portas-palete, incluindo status de disponibilidade e localização.</li>
-            </ul>
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/CP-6423-01.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Simulador de Bins: Necessidade vs. Capacidade
+            </h2>
+            <p style="font-size: 1.1em">
+              Ferramenta estratégica para cálculo automático de abastecimento,
+              garantindo que as posições de picking suportem a volumetria
+              demandada.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ Funcionalidades do Sistema:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 12px">
+                  <strong>Cálculo de Necessidade:</strong> Determina o número de
+                  bins por produto, respeitando os limites volumétricos de cada
+                  modelo de caixa.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Análise de Capacidade:</strong> Compara em tempo real
+                  a demanda de armazenamento com o espaço disponível fisicamente
+                  na posição.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Relatórios Detalhados:</strong> Visão completa por
+                  produto e estrutura, indicando status de atendimento, volume
+                  movimentado e capacidade máxima.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Gestão de Estruturas:</strong> Resumos rápidos que
+                  identificam posições críticas (falta de bins) e posições
+                  otimizadas.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Flexibilidade Operacional:</strong> Permite ajustes
+                  manuais para demandas sazonais ou específicas.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Objetivo:</strong> Equilibrar o estoque de picking,
+              evitar rupturas por falta de espaço e otimizar a densidade de
+              armazenamento.
+            </div>
+          </div>
 
-            <h3 style="margin-top: 30px; border-left: 4px solid #ff4b4b; padding-left: 15px;">💡 Recomendações:</h3>
-            <ul>
-                <li>⚠️ Respeite o formato dos arquivos de exemplo. Campos obrigatórios e estrutura devem ser mantidos para simulação correta.</li>
-                <li>📊 Simuladores otimizados para cenários logísticos comuns, porém podem ser ajustados conforme necessidade específica.</li>
-                <li>🔄 Atualizações e melhorias contínuas. Sempre que possível, consulte a última versão do portal.</li>
-            </ul>
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/pallete.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Central de Inteligência em Paletização
+            </h2>
+            <p style="font-size: 1.1em">
+              Esta ferramenta foi desenvolvida para otimizar o planejamento
+              logístico, garantindo o máximo aproveitamento de espaço e precisão
+              no cálculo de armazenamento.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ O que o simulador oferece:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 8px">
+                  <strong>Simulação Visual 3D:</strong> Visualize o pallet
+                  montado antes mesmo de ir para o estoque com teste de rotação
+                  automática.
+                </li>
+                <li style="margin-bottom: 8px">
+                  <strong>Cálculo de Capacidade Real:</strong> Saiba quantas
+                  caixas e unidades cabem, respeitando o limite de altura do
+                  porta-pallet.
+                </li>
+                <li style="margin-bottom: 8px">
+                  <strong>Processamento em Lote:</strong> Suba uma planilha
+                  Excel e processe centenas de produtos instantaneamente.
+                </li>
+                <li style="margin-bottom: 8px">
+                  <strong>Aproveitamento de Volume:</strong> Indicador
+                  percentual de eficiência do espaço utilizado.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Objetivo:</strong> Reduzir erros de cubagem, otimizar o
+              transporte e agilizar o cadastro de novos produtos no sistema.
+            </div>
+          </div>
 
-            <h3 style="margin-top: 30px;">📲 Dúvidas ou Sugestões:</h3>
-            <p>Você pode entrar em contato diretamente através do botão <strong>Contato</strong> no menu ou pelos links ao final da página.</p>
-            <p>🤝 Conte comigo para evoluir seus processos logísticos e operacionais!</p>
-            
+          <div
+            style="
+              font-family: 'Segoe UI', Arial, sans-serif;
+              color: #f0f2f6;
+              background-color: #0e1117;
+              padding: 20px;
+              border-radius: 12px;
+              border: 1px solid #30363d;
+              line-height: 1.6;
+            "
+          >
+            <h2
+              style="
+                color: #ff4b4b;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              "
+            >
+              <img
+                src="images/IMG/warehouse.png"
+                style="width: 32px; vertical-align: baseline"
+              />
+              Simulador de Estoque 3D: Visão Gerencial
+            </h2>
+            <p style="font-size: 1.1em">
+              Interface avançada para gestão de armazéns, permitindo a
+              visualização espacial de endereços e níveis de ocupação integrados
+              a dados operacionais.
+            </p>
+            <div style="margin: 20px 0">
+              <h4 style="color: #00d4ff; margin-bottom: 10px">
+                ✨ Destaques do Sistema:
+              </h4>
+              <ul style="padding-left: 20px">
+                <li style="margin-bottom: 12px">
+                  <strong>Visualização 3D interativa:</strong> Interface
+                  intuitiva para navegar e explorar o armazém em tempo real.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Filtros Inteligentes:</strong> Processamento sob
+                  demanda para visualizar setores, famílias de produtos ou
+                  status de ocupação.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Navegação Espacial:</strong> Simulador 3D interativo
+                  que facilita a identificação de posições críticas e áreas de
+                  picking.
+                </li>
+                <li style="margin-bottom: 12px">
+                  <strong>Dashboard Analítico:</strong> Gráficos e indicadores
+                  de performance gerados em paralelo à simulação visual.
+                </li>
+              </ul>
+            </div>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #238636;
+              "
+            >
+              <strong>✅ Ideal para:</strong> Inventários cíclicos, planejamento
+              de layout de armazém e auditorias rápidas de ocupação de
+              porta-pallets.
+            </div>
+            <h4 style="color: #ecb213; margin-bottom: 10px">Importante:</h4>
+            <div
+              style="
+                background-color: #23863622;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 4px solid #f0d851;
+              "
+            >
+              <strong>⚠️ Como usar:</strong> Primeiro conecte-se como
+              administrador do sistema para configurar os dados do armazém e
+              depois como operador para visualizar os dados de ocupação.
+            </div>
+          </div>
         </div>
+        <h3
+          style="
+            margin-top: 40px;
+            border-left: 4px solid #00d4ff;
+            padding-left: 15px;
+          "
+        >
+          📁 Arquivos de Exemplo:
+        </h3>
+        <p>
+          Para facilitar o uso dos simuladores, disponibilizamos arquivos
+          prontos para teste:
+        </p>
+        <ul>
+          <li>
+            🗂️ <strong>Exemplo 2D / 3D:</strong> Layout com colunas padrão de
+            produto, dimensões e loja. Ideal para testar os simuladores de
+            caixas.
+          </li>
+          <li>
+            🗂️ <strong>Exemplo Separação:</strong> Estrutura simulada de
+            separação em esteira, com produtos, quantidades e estações
+            configuradas.
+          </li>
+          <li>
+            🗂️ <strong>Exemplo Bins:</strong> Arquivo com demanda de produtos e
+            posições de picking, pronto para validar a necessidade de bins em
+            relação à capacidade cadastrada.
+          </li>
+          <li>
+            🗂️ <strong>Exemplo Paletização 3D:</strong> Arquivo com dados de
+            cubagem das caixas de fornecedores dos skus utilizados em operações
+            de paletização logísticas.
+          </li>
+          <li>
+            🗂️ <strong>Exemplo Estoque 3D administrador:</strong> Arquivo com
+            dados de configuração do armazém, incluindo dimensões (altura
+            máxima), estrutura de endereçamento (corredor, coluna, nível e
+            posição).
+          </li>
+          <li>
+            🗂️ <strong>Exemplo Estoque 3D operador:</strong> Arquivo com dados
+            de ocupação de portas-palete, incluindo status de disponibilidade e
+            localização.
+          </li>
+        </ul>
+
+        <h3
+          style="
+            margin-top: 30px;
+            border-left: 4px solid #ff4b4b;
+            padding-left: 15px;
+          "
+        >
+          💡 Recomendações:
+        </h3>
+        <ul>
+          <li>
+            ⚠️ Respeite o formato dos arquivos de exemplo. Campos obrigatórios e
+            estrutura devem ser mantidos para simulação correta.
+          </li>
+          <li>
+            📊 Simuladores otimizados para cenários logísticos comuns, porém
+            podem ser ajustados conforme necessidade específica.
+          </li>
+          <li>
+            🔄 Atualizações e melhorias contínuas. Sempre que possível, consulte
+            a última versão do portal.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 30px">📲 Dúvidas ou Sugestões:</h3>
+        <p>
+          Você pode entrar em contato diretamente através do botão
+          <strong>Contato</strong> no menu ou pelos links ao final da página.
+        </p>
+        <p>
+          🤝 Conte comigo para evoluir seus processos logísticos e operacionais!
+        </p>
+      </div>
     </div>
 
     <!-- Fundo Escuro para Popups -->
@@ -257,57 +725,99 @@
 
     <!-- Popup de Contato -->
     <div class="popup" id="contatoPopup">
-        <div class="popup-content">
-            <span class="close-btn" id="closeContatoPopup">&times;</span>
-            <h2>📞 Contato</h2>
-            <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
-            <p>Entre em contato para projetos personalizados</p>
-            <ul>
-                <li>Email: andy.oliveiraf@gmail.com <a href="mailto:andy.oliveiraf@gmail.com">📧</a></li>
-                <li>GitHub: <a href="https://github.com/MySpaceCrazy" target="_blank">MySpaceCrazy</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">Ânderson Oliveira</a></li>
-            </ul>
-            <p>Estou sempre aberto a sugestões e melhorias. Sua opinião é muito importante!</p>
-        </div>
+      <div class="popup-content">
+        <span class="close-btn" id="closeContatoPopup">&times;</span>
+        <h2>📞 Contato</h2>
+        <p>Para dúvidas, sugestões ou feedback, entre em contato:</p>
+        <p>Entre em contato para projetos personalizados</p>
+        <ul>
+          <li>
+            Email: andy.oliveiraf@gmail.com
+            <a href="mailto:andy.oliveiraf@gmail.com">📧</a>
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/MySpaceCrazy" target="_blank"
+              >MySpaceCrazy</a
+            >
+          </li>
+          <li>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4"
+              target="_blank"
+              >Ânderson Oliveira</a
+            >
+          </li>
+        </ul>
+        <p>
+          Estou sempre aberto a sugestões e melhorias. Sua opinião é muito
+          importante!
+        </p>
+      </div>
     </div>
 
     <!-- Ajuda Popup -->
     <div class="help-popup-bg" id="helpPopupBg"></div>
     <div class="help-popup" id="helpPopup">
-        <div class="popup-content">
-            <h2>Como Usar os Simuladores</h2>
-            <ol>
-                <li>Escolha o simulador desejado abaixo.</li>
-                <li>Clique em "Abrir App" para acessar.</li>
-                <li>Faça upload dos arquivos conforme instruções dos simuladores.</li>
-            </ol>
-            <button id="closeHelpPopup" class="btn btn-close">Fechar</button>
-        </div>
+      <div class="popup-content">
+        <h2>Como Usar os Simuladores</h2>
+        <ol>
+          <li>Escolha o simulador desejado abaixo.</li>
+          <li>Clique em "Abrir App" para acessar.</li>
+          <li>Faça upload dos arquivos conforme instruções dos simuladores.</li>
+        </ol>
+        <button id="closeHelpPopup" class="btn btn-close">Fechar</button>
+      </div>
     </div>
 
     <!-- Botões Flutuantes -->
-    <button id="scrollToTop" title="Voltar ao Topo">🔝</button>
-    <button id="helpButton" class="help-btn" title="Ajuda">❔</button>
+    <button id="scrollToTop" title="Voltar ao Topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <button id="helpButton" class="help-btn" title="Ajuda">
+      <i class="fa-solid fa-question"></i>
+    </button>
 
     <!-- Rodapé -->
     <footer class="footer">
-        <img src="https://avatars.githubusercontent.com/u/90271653?v=4" alt="Autor">
-        <p class="author-name">Ânderson Oliveira</p>
-        <p>Engenheiro de Dados | Soluções Logísticas | Automações</p>
-        <div>
-            <a href="https://github.com/MySpaceCrazy" target="_blank">
-                <img src="images/IMG/github.png" alt="GitHub" style="width: 32px;">
-            </a>
-            <a href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4" target="_blank">
-                <img src="images/IMG/linkedin.png" alt="LinkedI" style="width: 32px;">
-            </a>
-             <a href="https://sites.google.com/view/dashcosultandersonoliveira/in%C3%ADcio" target="_blank">
-                <img src="images/IMG/icons8-power-bi.png" alt="PowerBI" style="width: 32px;">
-            </a>
-        </div>
-        <p class="footer-text">© 2025 Ânderson Oliveira. Todos os direitos reservados.</p>
+      <img
+        src="https://avatars.githubusercontent.com/u/90271653?v=4"
+        alt="Autor"
+      />
+      <p class="author-name">Ânderson Oliveira</p>
+      <p>Engenheiro de Dados | Soluções Logísticas | Automações</p>
+      <div>
+        <a href="https://github.com/MySpaceCrazy" target="_blank">
+          <img src="images/IMG/github.png" alt="GitHub" style="width: 32px" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/%C3%A2nderson-matheus-flores-de-oliveira-5b92781b4"
+          target="_blank"
+        >
+          <img
+            src="images/IMG/linkedin.png"
+            alt="LinkedI"
+            style="width: 32px"
+          />
+        </a>
+        <a
+          href="https://sites.google.com/view/dashcosultandersonoliveira/in%C3%ADcio"
+          target="_blank"
+        >
+          <img
+            src="images/IMG/icons8-power-bi.png"
+            alt="PowerBI"
+            style="width: 32px"
+          />
+        </a>
+      </div>
+      <p class="footer-text">
+        © <span id="anoAtual"></span> Ânderson Oliveira. Todos os direitos
+        reservados.
+      </p>
     </footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
