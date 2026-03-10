@@ -90,11 +90,11 @@ document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
   card.addEventListener('mouseout', () => {
     card.style.transform = 'translateY(0) scale(1)';
   });
-  card.addEventListener('click', () => {
-    const appName = card.querySelector('h3')?.textContent || 'aplicativo';
-    alert(`Você clicou no card do ${appName}`);
-  });
-});
+//  card.addEventListener('click', () => {
+//    const appName = card.querySelector('h3')?.textContent || 'aplicativo';
+//    alert(`Você clicou no card do ${appName}`);
+//  });
+//});
 
 // Scroll para topo botão
 if (scrollToTop) {
