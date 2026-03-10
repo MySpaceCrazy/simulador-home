@@ -212,7 +212,13 @@ document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
 });*/
 
 document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (evento) => {
+    // Se o elemento clicado foi o próprio botão de link (tag A)
+    if (evento.target.tagName.toLowerCase() === 'a') {
+      return; // Sai da função e deixa apenas o HTML abrir a aba
+    }
+    
+    // Se clicou em qualquer outro lugar do card (imagem, título, fundo)
     const link = card.querySelector('a').href;
     window.open(link, '_blank');
   });
