@@ -94,7 +94,7 @@ document.querySelectorAll('.app-card,.app-card-bin').forEach(card => {
 //    const appName = card.querySelector('h3')?.textContent || 'aplicativo';
 //    alert(`Você clicou no card do ${appName}`);
 //  });
-//});
+});
 
 // Scroll para topo botão
 if (scrollToTop) {
