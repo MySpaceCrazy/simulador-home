@@ -16,7 +16,7 @@ const closeHelpPopup = document.getElementById('closeHelpPopup');
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".hero h1");
   if (header) {
-    header.style.opacity = window.scrollY > 50 ? "0.5" : "1";
+    header.style.opacity = window.scrollY > 50 ? "0.1" : "1";
   }
 
   if (scrollToTop) {
