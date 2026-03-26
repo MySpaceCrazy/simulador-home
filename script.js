@@ -296,7 +296,7 @@ function scrollToElementSlow(element, duration = 4000) {
     const progress = Math.min(timeElapsed / duration, 1);
 
     // Movimento suave (ease-in-out)
-    const ease = progress < 0.1
+    const ease = progress < 0.3
       ? 2 * progress * progress
       : -1 + (4 - 2 * progress) * progress;
 
