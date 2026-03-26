@@ -16,7 +16,7 @@ const closeHelpPopup = document.getElementById('closeHelpPopup');
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".hero h1");
   if (header) {
-    header.style.opacity = window.scrollY > 50 ? "0.1" : "1";
+    header.style.opacity = window.scrollY > 50 ? "0.5" : "1";
   }
 
   if (scrollToTop) {
@@ -296,7 +296,7 @@ function scrollToElementSlow(element, duration = 4000) {
     const progress = Math.min(timeElapsed / duration, 1);
 
     // Movimento suave (ease-in-out)
-    const ease = progress < 0.5
+    const ease = progress < 0.1
       ? 2 * progress * progress
       : -1 + (4 - 2 * progress) * progress;
 
